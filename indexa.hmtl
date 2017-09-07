@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SpaceNext</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+    <meta charset="utf-8">
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <a class="navbar-brand" href="#" style="margin-bottom: 5px">
+	    <img alt="Brand" src="img/logo.png" width="50px" height="25px">
+	</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right" style="margin-top: 3px">
+      <li class="active"><a href="#">Home</a></li>
+      <li ><a href="#">Industrial Visit</a></li>
+      <li><a href="#">Quiz / Games</a></li>
+      <li><a href="#">Knowledge Center</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+</body>
+</html>
