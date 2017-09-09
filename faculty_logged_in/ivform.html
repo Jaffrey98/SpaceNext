@@ -125,7 +125,7 @@ body { font-size:14px; }
 				<label >Faculty Name:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="fname" class="inputc" required>
+				<input type="text" name="fname" id="fnameid" class="inputc" required readonly>
 			</div>		
 		</div>
 		<div class="row fields">
@@ -134,7 +134,7 @@ body { font-size:14px; }
 				<label >Designation:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="desg" class="inputc" required>
+				<input type="text" name="desg" id="desgid" class="inputc" required readonly>
 			</div>		
 		</div>
 		<div class="row fields">
@@ -143,7 +143,7 @@ body { font-size:14px; }
 				<label >Institute Name:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="insname" class="inputc" required>
+				<input type="text" name="insname" id="insnameid" class="inputc" required readonly>
 			</div>		
 		</div>
 		<div class="row fields">
@@ -152,7 +152,7 @@ body { font-size:14px; }
 				<label >Address:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="address" class="inputc" required>
+				<input type="text" name="address" id="addressid" class="inputc" required readonly>
 			</div>		
 		</div>
 		<div class="row fields">
@@ -161,7 +161,7 @@ body { font-size:14px; }
 					<label >No. of Students:</label>
 				</div>
 				<div class="col-md-5 ">
-					<input type="number" name="nstudents" class="inputc" required>
+					<input type="number" name="nstudents" class="inputc" required style="color: black">
 				</div>		
 		</div>
 		<br>
@@ -229,7 +229,7 @@ function addRow(tableID) {
 			newcell.innerHTML = table.rows[0].cells[i].innerHTML;
 		}
 	}else{
-		 alert("Maximum Passenger per ticket is 5");
+		 alert("Maximum no. of students reached");
 			   
 	}
 }
