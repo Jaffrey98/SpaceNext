@@ -39,3 +39,14 @@
 	z-index: 200;
 }
 
+/*.iframec{
+	margin-top: 720px;
+	margin-left: 10px;
+	position: absolute;
+	z-index: 201;
+}*/
+
+.submit_button{
+	position: absolute;
+	z-index: 201;
+}

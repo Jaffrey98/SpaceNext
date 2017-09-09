@@ -35,7 +35,7 @@ function NewUser($con) {
 	$data = mysqli_query($con, $query) or die(mysqli_error($con));
 	// echo "after insert query fired"."<br>";
 	if($data){
-		echo "<p style='color:#F5F9F8;font-family:Verdana;'>Thank you for registering with us!</p>";
+		echo "<p style='color:#F5F9F8;font-family:Verdana;'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Thank you for registering with us!</p>";
 	}
 }
 
