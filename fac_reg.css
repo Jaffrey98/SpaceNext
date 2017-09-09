@@ -4,6 +4,9 @@
 	margin-top: 30px;
 	padding-bottom: 50px;
 	background-color: 	#242D33;
+	position: absolute;
+	width: 870px;
+	z-index: -1;
 }
 
 
@@ -27,3 +30,12 @@
 	margin-top: 20px;
 	transform: scale(2.5);
 }
+
+
+.validate_button{
+	margin-top: 620px;
+	margin-left: 10px;
+	position: absolute;
+	z-index: 200;
+}
+

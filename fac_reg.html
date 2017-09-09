@@ -56,6 +56,19 @@ body { font-size:14px; }
     border-radius: 4px !important;
 }
 
+
+.submit_button{
+	visibility: hidden;
+}
+
+.show_button{
+	visibility: visible;
+}
+
+.fake{
+
+}
+
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
 }
@@ -126,7 +139,11 @@ body { font-size:14px; }
 <div>
 <div class="col-md-2"></div>
 <div class="col-md-8">
+<<<<<<< HEAD
 	<form class="form" action="fac_reg.php" method="post" style="margin-bottom: 50px" target="result">
+=======
+	<form class="form" action="create_fac_acc.php" method="post" target="_blank" style="margin-bottom: 50px; padding-bottom: 80px">
+>>>>>>> c01b71dc844a476c294458b0e9baea5005f10f09
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
@@ -152,7 +169,11 @@ body { font-size:14px; }
 				<label >Phone No:</label>
 			</div>
 			<div class="col-md-5 ">
+<<<<<<< HEAD
 				<input type="number" name="phoneno" class="inputc" required>
+=======
+				<input type="number" name="phoneno" class="inputc" required id="phoneno" style="color: black">  
+>>>>>>> c01b71dc844a476c294458b0e9baea5005f10f09
 				<!-- restrict to 10 digits -->
 			</div>
 		</div>
@@ -200,6 +221,7 @@ body { font-size:14px; }
 			</div>
 		</div>
 
+<<<<<<< HEAD
 			<div class="col-md-5"></div>
 			<input type="submit" value="Submit" name="submit" />
 			<br>
@@ -207,13 +229,51 @@ body { font-size:14px; }
             <center>
                 <iframe name="result" width="500" height="50"></iframe>
             <center>
+=======
+			
+			
+			<br><br><br><br><br>
+
+			<div class="col-md-5" ></div>
+			<div >
+				<input type="submit" id="submit_button" value="Submit" name="submit" class="submit_button" />  
+			</div>
+			
+>>>>>>> c01b71dc844a476c294458b0e9baea5005f10f09
 			<!-- just add to database in faculty table with confirmed value 0 -->
 	</form>
+		
 
+		<div class="col-md-4 "></div>
+		<button onclick="validate_phone_no()" class="validate_button">Validate Phone No.</button>
 
 </div>
 
+<script type="text/javascript">
+	
+function validate_phone_no() {
+	
 
+	var y = document.getElementsByName("phoneno")[0].value;
+	var phoneno = Number(y);
+
+
+	if (phoneno>999999999&&phoneno<=9999999999) 
+	{
+		var d = document.getElementById("submit_button");
+		d.classList.toggle("show_button");
+	}
+	else
+	{
+		alert("Enter a valid Phone Number!!");
+
+	}
+	
+
+	
+
+}
+</script>
 
 </div>
 <div class="col-md-2"></div>
