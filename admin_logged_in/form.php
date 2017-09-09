@@ -61,6 +61,7 @@ function create_iv($con)
 	$sn_name=$_POST['sn_name'];
 	$sn_id=$_POST['sn_id'];
 	$t_name="ids".rand(1,10000);
+	echo "string";
 
 }
 

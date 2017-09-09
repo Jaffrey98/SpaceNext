@@ -1,0 +1,29 @@
+.form{
+	border :2px solid #000000;
+	padding-top: 50px;
+	margin-top: 30px;
+	padding-bottom: 50px;
+	background-color: 	#242D33;
+}
+
+
+.fields{
+	margin: 20px;
+	font-size: 15px;
+	color: white;
+}
+
+.inputc{
+	width: 300px;
+	height: 40px;
+}
+
+.formtable{
+	border: none;
+}
+
+.checkboxc{
+	margin-left: 20px;
+	margin-top: 20px;
+	transform: scale(2.5);
+}

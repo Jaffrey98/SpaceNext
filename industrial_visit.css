@@ -1,0 +1,19 @@
+.book_button{
+	-webkit-appearance: button;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 12px 30px;
+    border: 1px solid #fcd088;
+    color: #fcd088;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin: 0;
+    vertical-align: baseline;
+    line-height: inherit;
+    font: inherit;
+    box-sizing: border-box;
+
+}
