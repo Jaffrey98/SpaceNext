@@ -56,6 +56,19 @@ body { font-size:14px; }
     border-radius: 4px !important;
 }
 
+
+.submit_button{
+	visibility: hidden;
+}
+
+.show_button{
+	visibility: visible;
+}
+
+.fake{
+
+}
+
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
 }
@@ -126,7 +139,7 @@ body { font-size:14px; }
 <div>
 <div class="col-md-2"></div>
 <div class="col-md-8">
-	<form class="form" action="create_fac_acc.php" method="post" style="margin-bottom: 50px">
+	<form class="form" action="create_fac_acc.php" method="post" target="_blank" style="margin-bottom: 50px; padding-bottom: 80px">
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
@@ -152,7 +165,7 @@ body { font-size:14px; }
 				<label >Phone No:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="number" name="phoneno" class="inputc" required>  
+				<input type="number" name="phoneno" class="inputc" required id="phoneno" style="color: black">  
 				<!-- restrict to 10 digits -->
 			</div>	
 		</div>
@@ -200,15 +213,49 @@ body { font-size:14px; }
 			</div>		
 		</div>
 
-			<div class="col-md-5"></div>
-			<input type="submit" value="Submit" name="submit" />  
+			
+			
+			<br><br><br><br><br>
+
+			<div class="col-md-5" ></div>
+			<div >
+				<input type="submit" id="submit_button" value="Submit" name="submit" class="submit_button" />  
+			</div>
+			
 			<!-- just add to database in faculty table with confirmed value 0 -->
 	</form>
+		
 
+		<div class="col-md-4 "></div>
+		<button onclick="validate_phone_no()" class="validate_button">Validate Phone No.</button>
 
 </div>
 
+<script type="text/javascript">
+	
+function validate_phone_no() {
+	
 
+	var y = document.getElementsByName("phoneno")[0].value;
+	var phoneno = Number(y);
+
+
+	if (phoneno>999999999&&phoneno<=9999999999) 
+	{
+		var d = document.getElementById("submit_button");
+		d.classList.toggle("show_button");
+	}
+	else
+	{
+		alert("Enter a valid Phone Number!!");
+
+	}
+	
+
+	
+
+}
+</script>
 
 </div>
 <div class="col-md-2"></div>
