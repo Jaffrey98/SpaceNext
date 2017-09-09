@@ -9,7 +9,7 @@
 <title>SpaceNext</title>
 <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
 <link rel="dns-prefetch" href="http://s.w.org/">
-<link rel="stylesheet" type="text/css" href="form.css">
+<link rel="stylesheet" type="text/css" href="ivform.css">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Feed" href="http://localhost/wordpress/feed/">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Comments Feed" href="http://localhost/wordpress/comments/feed/">
 <link rel="stylesheet" id="bootstrap-css" href="./index_files/bootstrap.min.css" type="text/css" media="all">
@@ -52,6 +52,11 @@ body { font-size:14px; }
     width: 200px !important;
     border: 2px rgba(255,255,255,.38) solid !important;
     border-radius: 4px !important;
+}
+
+.modifytable{
+	margin-left: 230px;
+	width: 410px;
 }
 
 .en-markup-crop-options div div:first-of-type {
@@ -161,49 +166,41 @@ body { font-size:14px; }
 		</div>
 		<br>
 		<div class="row fields">
-			<div class="col-md-3"></div>
+			<div class="col-md-4"></div>
 			<div class="col-md-8">
 				<p> 
-				  <input type="button" value="Add Student" onClick="addRow('dataTable')" /> 
+				  <input type="button" value="Add Student" onClick="addRow('dataTable')" style="margin-left: 40px" /> 
 				  <!-- <input type="button" value="Remove Student(s)" onClick="deleteRow('dataTable')" />  -->
 				  <!-- <p>(All acions apply only to entries with check marked check boxes only.)</p> -->
 				</p>
 			</div>
 			<div class="col-md-1"></div>	
 		</div>
-<!-- 	<div class="col-md-2"></div>
-	<div class="col-md-8"> -->
-		<table id="dataTable" class="formtable" border="0">
-			 <tbody>
-			 
-			 
+
+
+		<table id="dataTable" class="formtable modifytable">
+			 <tbody>		 
 				  <tr>
 					<p>
-						
-						
-							<!-- <td>
-							<input type="checkbox" name="chk[]" checked="checked" class="checkboxc" />
-							</td> -->
-							<td>
-							<input type="text" name="sn_name[]" placeholder="Student name">
-							</td>	
-							<td>
+						<!-- <td>
+						<input type="checkbox" name="chk[]" checked="checked" class="checkboxc" />
+						</td> -->
+						<td>
+							<input type="text" name="sn_name[]" placeholder="Student name" required>
+						</td>	
+						<td>
 							<input type="text" class="small"  name="sn_id[]" placeholder="Student ID">
-							</td>	
-						
-						
+						</td>	
 					</p>
 				  </tr>
 			 
 			 </tbody>
-			</table>
+		</table>
+
 			<div class="col-md-5"></div>
 			<input type="button" value="Submit" name="submit" /> 
 			<!-- Send the details to iv table -->
 
-
-<!-- 	</div>
-	<div class="col-md-2"></div> -->
 
 </div>
 
@@ -228,6 +225,7 @@ function addRow(tableID) {
 		var colCount = table.rows[0].cells.length;
 		for(var i=0; i <colCount; i++) {
 			var newcell = row.insertCell(i);
+
 			newcell.innerHTML = table.rows[0].cells[i].innerHTML;
 		}
 	}else{
