@@ -30,7 +30,7 @@ function NewUser($con) {
 	$email = $_POST['email'];
 	$pass = $_POST['pass'];
 	// echo "before insert declartion"."<br>";
-	$query = "INSERT INTO reg_stud (uname, email_id , pass ,sch_eligible) VALUES ('$uname','$pass','$email',0)";
+	$query = "INSERT INTO reg_stud (uname, email_id , pass ,sch_eligible) VALUES ('$uname','$email','$pass',0)";
 	// echo "after insert declartion"."<br>";
 	$data = mysqli_query($con, $query) or die(mysqli_error($con));
 	// echo "after insert query fired"."<br>";
