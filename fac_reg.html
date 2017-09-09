@@ -11,7 +11,7 @@
 <title>SpaceNext</title>
 <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
 <link rel="dns-prefetch" href="http://s.w.org/">
-<link rel="stylesheet" type="text/css" href="fac_login.css">
+<link rel="stylesheet" type="text/css" href="fac_reg.css">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Feed" href="http://localhost/wordpress/feed/">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Comments Feed" href="http://localhost/wordpress/comments/feed/">
 <link rel="stylesheet" id="bootstrap-css" href="./index_files/bootstrap.min.css" type="text/css" media="all">
@@ -115,9 +115,9 @@ body { font-size:14px; }
 
 <div class="row">
 <br>
-	<div class="col-md-5"></div>
+	<div class="col-md-1"></div>
 	<div class="col-md-5">
-		<h1 >Student Login</h1>
+		<h1 >Apply for a new faculty account...</h1>
 	</div>
 	<div class="col-md-2"></div>
 </div>
@@ -126,16 +126,70 @@ body { font-size:14px; }
 <div>
 <div class="col-md-2"></div>
 <div class="col-md-8">
-	<form class="form" action="stu_login.php" method="post">
+	<form class="form" action="create_fac_acc.php" method="post" style="margin-bottom: 50px">
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
-				<label >Username:</label>
+				<label >Name:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="uname" class="inputc" required>
+				<input type="text" name="name" class="inputc" required>
 			</div>		
 		</div>
+		<div class="row fields">
+		<div class="col-md-3"></div>
+			<div class="col-md-2">
+				<label >Email ID:</label>
+			</div>
+			<div class="col-md-5 ">
+				<input type="email" name="emailid" class="inputc" required>
+			</div>
+		</div>
+
+		<div class="row fields">
+		<div class="col-md-3"></div>
+			<div class="col-md-2">
+				<label >Phone No:</label>
+			</div>
+			<div class="col-md-5 ">
+				<input type="number" name="phoneno" class="inputc" required>  
+				<!-- restrict to 10 digits -->
+			</div>	
+		</div>
+
+		<div class="row fields">
+		<div class="col-md-3"></div>
+			<div class="col-md-2">
+				<label >Address:</label>
+			</div>
+			<div class="col-md-5 ">
+				<textarea name="address" class="inputc" required="true" style="height: 100px;">
+					
+				</textarea>
+				
+			</div>		
+		</div>
+		
+		<div class="row fields">
+		<div class="col-md-3"></div>
+			<div class="col-md-2">
+				<label >Designation:</label>
+			</div>
+			<div class="col-md-5 ">
+				<input type="text" name="desg" class="inputc" required>
+			</div>		
+		</div>
+
+		<div class="row fields">
+		<div class="col-md-3"></div>
+			<div class="col-md-2">
+				<label >Institute Name:</label>
+			</div>
+			<div class="col-md-5 ">
+				<input type="text" name="insname" class="inputc" required>
+			</div>		
+		</div>
+
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
@@ -145,42 +199,10 @@ body { font-size:14px; }
 				<input type="Password" name="pass" class="inputc" required>
 			</div>		
 		</div>
-		<br>
-			<center>
-			<!-- IF LOGIN CORRECT REDIRECT TO student_logged_in/index.html -->
-				<input type="button" value="Submit" name="submit" style="margin-left: 10px;" /> 
-			</center>
-				
 
-			<br>
-
-
-			<div class="row">
-			<div class="col-md-2">
-				
-			</div>
-			<div class="col-md-3" style="margin-left: 35px">
-				<a href="fac_login.html"><input type="button" value="I'm a Faculty" name="submit" /> </a>
-			</div>
-			<div class="col-md-1">
-				
-			</div>
-			<div class="col-md-3">
-				<a href="stu_reg.html"><input type="button" value="Not a user yet ?" name="submit" /> </a>
-			</div>
-				
-				
-			</div>
-			
-			
-			<center>
-			
-			</center>
-				
-			<center>
-			
-			</center>
-				
+			<div class="col-md-5"></div>
+			<input type="button" value="Submit" name="submit" />  
+			<!-- just add to database in faculty table with confirmed value 0 -->
 	</form>
 
 

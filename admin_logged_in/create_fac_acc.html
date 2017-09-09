@@ -97,7 +97,7 @@ body { font-size:14px; }
 					<div id="footer-menu" class="menu"><ul>
 			<li class="page_item page-item-2"><a href="index.html">Home</a></li>
 			<li class="page_item page-item-21"><a href="industrial_visit.html">Industrial Visit</a></li>
-			<li class="page_item page-item-23"><a href="http://localhost/wordpress/quiz-games/">Quiz / Games</a></li>
+			<li class="page_item page-item-23"><a href="http://localhost/wordpress/quiz-games/">Quiz</a></li>
 			<li class="page_item page-item-25"><a href="http://localhost/wordpress/knowledge-centre/">Knowledge Centre</a></li>
 			<li class="page_item page-item-27"><a href="stu_login.html">Login</a></li>
 			</ul></div>
@@ -130,57 +130,33 @@ body { font-size:14px; }
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
-				<label >Username:</label>
+				<label >Name:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="funame" class="inputc" required>
+				<input type="text" name="name" class="inputc" required>
 			</div>		
 		</div>
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
-				<label >Password:</label>
+				<label >Email ID:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="Password" name="fpass" class="inputc" required>
-			</div>		
-		</div>
-		<div class="row fields">
-			<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Faculty Name:</label>
+				<input type="email" name="emailid" class="inputc" required>
 			</div>
-			<div class="col-md-5 ">
-				<input type="text" name="fname" class="inputc" required>
-			</div>		
 		</div>
+
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
-				<label >Faculty Id:</label>
+				<label >Phone No:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="fid" class="inputc" required>
-			</div>		
+				<input type="number" name="phoneno" class="inputc" required>  
+				<!-- restrict to 10 digits -->
+			</div>	
 		</div>
-		<div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Designation:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="text" name="desg" class="inputc" required>
-			</div>		
-		</div>
-		<div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Institute Name:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="text" name="insname" class="inputc" required>
-			</div>		
-		</div>
+
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
@@ -193,26 +169,37 @@ body { font-size:14px; }
 				
 			</div>		
 		</div>
-		<div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Email ID:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="email" name="emailid" class="inputc" required>
-			</div>
-		</div>
-		<div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Phone No:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="number" name="emailid" class="inputc" required>  
-				<!-- restrict to 10 digits -->
-			</div>	
-		</div>	
 		
+		<div class="row fields">
+		<div class="col-md-3"></div>
+			<div class="col-md-2">
+				<label >Designation:</label>
+			</div>
+			<div class="col-md-5 ">
+				<input type="text" name="desg" class="inputc" required>
+			</div>		
+		</div>
+
+		<div class="row fields">
+		<div class="col-md-3"></div>
+			<div class="col-md-2">
+				<label >Institute Name:</label>
+			</div>
+			<div class="col-md-5 ">
+				<input type="text" name="insname" class="inputc" required>
+			</div>		
+		</div>
+
+		<div class="row fields">
+		<div class="col-md-3"></div>
+			<div class="col-md-2">
+				<label >Password:</label>
+			</div>
+			<div class="col-md-5 ">
+				<input type="Password" name="pass" class="inputc" required>
+			</div>		
+		</div>
+
 			<div class="col-md-5"></div>
 			<input type="button" value="Submit" name="submit" />  
 			<!-- just add to database in faculty table -->
