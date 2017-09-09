@@ -126,7 +126,7 @@ body { font-size:14px; }
 <div>
 <div class="col-md-2"></div>
 <div class="col-md-8">
-	<form class="form" action="create_fac_acc.php" method="post" style="margin-bottom: 50px">
+	<form class="form" action="fac_reg.php" method="post" style="margin-bottom: 50px" target="result">
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
@@ -134,7 +134,7 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="name" class="inputc" required>
-			</div>		
+			</div>
 		</div>
 		<div class="row fields">
 		<div class="col-md-3"></div>
@@ -152,9 +152,9 @@ body { font-size:14px; }
 				<label >Phone No:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="number" name="phoneno" class="inputc" required>  
+				<input type="number" name="phoneno" class="inputc" required>
 				<!-- restrict to 10 digits -->
-			</div>	
+			</div>
 		</div>
 
 		<div class="row fields">
@@ -164,12 +164,12 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 				<textarea name="address" class="inputc" required="true" style="height: 100px;">
-					
+
 				</textarea>
-				
-			</div>		
+
+			</div>
 		</div>
-		
+
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
@@ -177,7 +177,7 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="desg" class="inputc" required>
-			</div>		
+			</div>
 		</div>
 
 		<div class="row fields">
@@ -187,7 +187,7 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="insname" class="inputc" required>
-			</div>		
+			</div>
 		</div>
 
 		<div class="row fields">
@@ -197,11 +197,16 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 				<input type="Password" name="pass" class="inputc" required>
-			</div>		
+			</div>
 		</div>
 
 			<div class="col-md-5"></div>
-			<input type="submit" value="Submit" name="submit" />  
+			<input type="submit" value="Submit" name="submit" />
+			<br>
+			<br>
+            <center>
+                <iframe name="result" width="500" height="50"></iframe>
+            <center>
 			<!-- just add to database in faculty table with confirmed value 0 -->
 	</form>
 
