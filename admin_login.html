@@ -1,3 +1,5 @@
+<!-- faculty_logged_in -->
+
 <!DOCTYPE html>
 <!-- saved from url=(0027)http://localhost/wordpress/ -->
 <html lang="en-US" class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,7 +11,7 @@
 <title>SpaceNext</title>
 <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
 <link rel="dns-prefetch" href="http://s.w.org/">
-<link rel="stylesheet" type="text/css" href="form.css">
+<link rel="stylesheet" type="text/css" href="fac_login.css">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Feed" href="http://localhost/wordpress/feed/">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Comments Feed" href="http://localhost/wordpress/comments/feed/">
 <link rel="stylesheet" id="bootstrap-css" href="./index_files/bootstrap.min.css" type="text/css" media="all">
@@ -78,10 +80,10 @@ body { font-size:14px; }
 			<nav id="mainnav" class="main-navigation col-md-8 col-sm-6 col-xs-12" role="navigation">
 				<div id="primary-menu" class="menu"><ul>
 <li class="page_item page-item-2"><a href="index.html">Home</a></li>
-<li class="page_item page-item-21"><a href="form.html">Industrial Visit</a></li>
+<li class="page_item page-item-21"><a href="industrial_visit.html">Industrial Visit</a></li>
 <li class="page_item page-item-23"><a href="http://localhost/wordpress/quiz-games/">Quiz / Games</a></li>
 <li class="page_item page-item-25"><a href="http://localhost/wordpress/knowledge-centre/">Knowledge Centre</a></li>
-<li class="page_item page-item-27"><a href="http://localhost/wordpress/login/">Login</a></li>
+<li class="page_item page-item-27"><a href="stu_login.html">Login</a></li>
 </ul></div>
 			</nav>
 		</div>
@@ -94,10 +96,10 @@ body { font-size:14px; }
 				<nav id="footernav" class="footer-navigation" role="navigation">
 					<div id="footer-menu" class="menu"><ul>
 			<li class="page_item page-item-2"><a href="index.html">Home</a></li>
-			<li class="page_item page-item-21"><a href="form.html">Industrial Visit</a></li>
+			<li class="page_item page-item-21"><a href="industrial_visit.html">Industrial Visit</a></li>
 			<li class="page_item page-item-23"><a href="http://localhost/wordpress/quiz-games/">Quiz / Games</a></li>
 			<li class="page_item page-item-25"><a href="http://localhost/wordpress/knowledge-centre/">Knowledge Centre</a></li>
-			<li class="page_item page-item-27"><a href="http://localhost/wordpress/login/">Login</a></li>
+			<li class="page_item page-item-27"><a href="stu_login.html">Login</a></li>
 			</ul></div>
 				</nav>
 		</footer>
@@ -110,162 +112,58 @@ body { font-size:14px; }
 <script type="text/javascript" src="./index_files/scripts.min.js.download"></script>
 
 <script type="text/javascript" src="./index_files/wp-embed.min.js.download"></script>
+
+<div class="row">
+<br>
+	<div class="col-md-5"></div>
+	<div class="col-md-5">
+		<h1 >Admin Login</h1>
+	</div>
+	<div class="col-md-2"></div>
+</div>
+
+
 <div>
 <div class="col-md-2"></div>
 <div class="col-md-8">
-	<form class="form" action="form.php" method="post">
+	<form class="form" action="admin_login.php" method="post">
 		<div class="row fields">
-			<div class="col-md-3"></div>
+		<div class="col-md-3"></div>
 			<div class="col-md-2">
-				<label >Faculty Name:</label>
+				<label >Username:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="fname" class="inputc" required>
+				<input type="text" name="uname" class="inputc" required>
 			</div>		
 		</div>
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
-				<label >Faculty Id:</label>
+				<label >Password:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="fid" class="inputc" required>
+				<input type="Password" name="pass" class="inputc" required>
 			</div>		
-		</div>
-		<div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Designation:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="text" name="desg" class="inputc" required>
-			</div>		
-		</div>
-		<div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Institute Name:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="text" name="insname" class="inputc" required>
-			</div>		
-		</div>
-		<div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Address:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="text" name="address" class="inputc" required>
-			</div>		
-		</div>
-		<div class="row fields">
-			<div class="col-md-3"></div>
-				<div class="col-md-2">
-					<label >No. of Students:</label>
-				</div>
-				<div class="col-md-5 ">
-					<input type="number" name="nstudents" class="inputc" required>
-				</div>		
 		</div>
 		<br>
-		<div class="row fields">
-			<div class="col-md-3"></div>
-			<div class="col-md-8">
-				<p> 
-				  <input type="button" value="Add Student" onClick="addRow('dataTable')" /> 
-				  <!-- <input type="button" value="Remove Student(s)" onClick="deleteRow('dataTable')" />  -->
-				  <!-- <p>(All acions apply only to entries with check marked check boxes only.)</p> -->
-				</p>
-			</div>
-			<div class="col-md-1"></div>	
-		</div>
-<!-- 	<div class="col-md-2"></div>
-	<div class="col-md-8"> -->
-		<table id="dataTable" class="formtable" border="0">
-			 <tbody>
-			 
-			 
-				  <tr>
-					<p>
-						
-						
-							<!-- <td>
-							<input type="checkbox" name="chk[]" checked="checked" class="checkboxc" />
-							</td> -->
-							<td>
-							<input type="text" name="sn_name[]" placeholder="Student name">
-							</td>	
-							<td>
-							<input type="text" class="small"  name="sn_id[]" placeholder="Student ID">
-							</td>	
-						
-						
-					</p>
-				  </tr>
-			 
-			 </tbody>
-			</table>
-			<div class="col-md-5"></div>
-			<input type="button" value="Submit" name="submit" /> 
+			<center>
+			<!-- IF LOGIN CORRECT REDIRECT TO admin_logged_in/index.html -->
+				<input type="button" value="Submit" name="submit" style="margin-left: 10px;" /> 
+			</center>
+				 
+				
+	</form>
 
-
-<!-- 	</div>
-	<div class="col-md-2"></div> -->
 
 </div>
 
 
-
-	</form>
 
 </div>
 <div class="col-md-2"></div>
 
 
 </div>
-
-
-<script type="text/javascript">
-	
-function addRow(tableID) {
-	var table = document.getElementById(tableID);
-	var rowCount = table.rows.length;
-	if(rowCount < 5){                            // limit the user from creating fields more than your limits
-		var row = table.insertRow(rowCount);
-		var colCount = table.rows[0].cells.length;
-		for(var i=0; i <colCount; i++) {
-			var newcell = row.insertCell(i);
-			newcell.innerHTML = table.rows[0].cells[i].innerHTML;
-		}
-	}else{
-		 alert("Maximum Passenger per ticket is 5");
-			   
-	}
-}
-
-// function deleteRow(tableID) {
-// 	var table = document.getElementById(tableID);
-// 	var rowCount = table.rows.length;
-// 	for(var i=0; i<rowCount; i++) {
-// 		// console.log("for");
-// 		var row = table.rows[i];
-// 		var chkbox = row.cells[0].childNodes[0];
-// 		console.log(row);
-// 		if(null != chkbox && true == chkbox.checked) {
-// 			console.log("in");
-// 			if(rowCount <= 1) {               // limit the user from removing all the fields
-// 				alert("Cannot Remove all the Passenger.");
-// 				break;
-// 			}
-// 			table.deleteRow(i);
-// 			rowCount--;
-// 			i--;
-// 		}
-// 	}
-// }
-
-</script>
 
 
 
