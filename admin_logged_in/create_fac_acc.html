@@ -1,4 +1,15 @@
 <!-- faculty_logged_in -->
+<?php
+	echo "
+	<script type="text/javascript">
+		alert("hi");
+	</script>
+	";
+?>
+
+
+
+
 
 <!DOCTYPE html>
 <!-- saved from url=(0027)http://localhost/wordpress/ -->
@@ -127,13 +138,17 @@ body { font-size:14px; }
 <div class="col-md-2"></div>
 <div class="col-md-8">
 	<form class="form" action="create_fac_acc.php" method="post" style="margin-bottom: 50px">
+
+	
+
+
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Name:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="name" class="inputc" required>
+				<input type="text" name="name" id="name_id" class="inputc" required>
 			</div>		
 		</div>
 		<div class="row fields">
@@ -142,7 +157,7 @@ body { font-size:14px; }
 				<label >Email ID:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="email" name="emailid" class="inputc" required>
+				<input type="email" name="emailid" id="email_id_id" class="inputc" required>
 			</div>
 		</div>
 
@@ -152,7 +167,7 @@ body { font-size:14px; }
 				<label >Phone No:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="number" name="phoneno" class="inputc" required>  
+				<input type="number" name="phoneno" id="phoneno_id" class="inputc" required>  
 				<!-- restrict to 10 digits -->
 			</div>	
 		</div>
@@ -163,7 +178,7 @@ body { font-size:14px; }
 				<label >Address:</label>
 			</div>
 			<div class="col-md-5 ">
-				<textarea name="address" class="inputc" required="true" style="height: 100px;">
+				<textarea name="address" class="inputc" id="address_id" required="true" style="height: 100px;">
 					
 				</textarea>
 				
@@ -176,7 +191,7 @@ body { font-size:14px; }
 				<label >Designation:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="desg" class="inputc" required>
+				<input type="text" name="desg" id="desg_id" class="inputc" required>
 			</div>		
 		</div>
 
@@ -186,7 +201,7 @@ body { font-size:14px; }
 				<label >Institute Name:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="insname" class="inputc" required>
+				<input type="text" name="insname" id="insname_id" class="inputc" required>
 			</div>		
 		</div>
 
