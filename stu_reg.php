@@ -43,5 +43,12 @@ if (isset($_POST['submit'])) {
 	// echo "entered isset func"."<br>";
 	signup($con);
 	// echo "Sign up complete";
+
+	echo '<script type="text/javascript">
+         	setTimeout(function redirect() {
+				window.open("student_logged_in/index.html");},1500);
+      </script>';
+	// header('Location:student_logged_in/index.html');
 }
+/*window.setTimeout(window.location.replace("student_logged_in/index.html"), 1000);*/
 ?>
