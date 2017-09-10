@@ -14,6 +14,13 @@ $db = mysqli_select_db($con, DB_NAME) or die("Failed to connect to the database:
 	$fac_data = mysqli_query($con,$sql);
 
 
+			while ($reg_fac=mysqli_fetch_assoc($fac_data)) {
+
+			
+				echo "<p>".$reg_fac['uname']."</p>  ";
+			
+			 }
+
 
 	// echo "
 	// <script>
@@ -218,12 +225,10 @@ body { font-size:14px; }
 			</div>		
 		</div>
 
-		<!-- <?php
 
-			// while ($reg_fac=mysqli_fetch_assoc($fac_data)) {
-
-				// echo "<script>
-				// 	document.getElementById("name_id").value =".$reg_fac['uname']."
+<!-- // document.getElementById("mytext").value = "My value";
+// echo "<script>
+				// 	// document.getElementById("name_id").value =".$reg_fac['uname']."
 				// </script>
 				// ";
 
@@ -232,20 +237,7 @@ body { font-size:14px; }
 				// $nid = $divId=get_the_ID();
 
 
-//value="<?php echo "".$reg_fac['uname']; ?>"
-
-				// echo "<script>
-				// 	var x = 5;
-				// 	document.getElementById($nid).value = x;
-				// </script>
-				// ";
-
-
-				// document.getElementById("mytext").value = "My value";
-			
-			// }
-
-		?> -->
+				//value="<?php echo "".$reg_fac['uname']; ?>" -->
 
 
 		<br><br>
