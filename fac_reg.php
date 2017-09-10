@@ -48,10 +48,10 @@ if (isset($_POST['submit'])) {
 	// echo "entered isset func"."<br>";
 	signup($con);
 	// echo "Sign up complete";
-	echo '<script type="text/javascript">
-			setTimeout(function redirect() {
-				window.open("faculty_logged_in/index.html");},1500);
-	  </script>';
+	// echo '<script type="text/javascript">
+	// 		setTimeout(function redirect() {
+	// 			window.open("faculty_logged_in/index.html");},1500);
+	//   </script>';
 }
 ?>
 <!--  -->
