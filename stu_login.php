@@ -210,7 +210,7 @@ body { font-size:14px; }
 
 			</div>
 			<div class="col-md-3" style="margin-left: 35px">
-				<a href="fac_login.html"><input type="button" value="I'm a Faculty" name="go_to_fac" /> </a>
+				<a href="fac_login.php"><input type="button" value="I'm a Faculty" name="go_to_fac" /> </a>
 			</div>
 			<div class="col-md-1">
 
