@@ -43,6 +43,7 @@ body { font-size:14px; }
 <link rel="https://api.w.org/" href="http://localhost/wordpress/wp-json/">
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/wordpress/xmlrpc.php?rsd">
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost/wordpress/wp-includes/wlwmanifest.xml">
+<link rel="stylesheet" type="text/css" href="industrial_visit.css">
 <meta name="generator" content="WordPress 4.8.1">
 <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
 .en-markup-crop-options {
@@ -73,15 +74,15 @@ body { font-size:14px; }
 	<header id="masthead" class="site-header has-header" role="banner">
 		<div class="container">
 			<div class="site-branding col-md-4 col-sm-6 col-xs-12">
-				<h1 class="site-title"><a href="http://localhost/wordpress/" rel="home">SpaceNext</a></h1><p class="site-description"></p>			</div>
+				<h1 class="site-title"><a href="#" rel="home">SpaceNext</a></h1><p class="site-description"></p>			</div>
 			<div class="btn-menu col-md-8 col-sm-6 col-xs-12"><i class="fa fa-navicon"></i></div>
 			<nav id="mainnav" class="main-navigation col-md-8 col-sm-6 col-xs-12" role="navigation">
 				<div id="primary-menu" class="menu"><ul>
 <li class="page_item page-item-2"><a href="index.html">Home</a></li>
-<li class="page_item page-item-21"><a href="form.html">Industrial Visit</a></li>
-<li class="page_item page-item-23"><a href="http://localhost/wordpress/quiz-games/">Quiz / Games</a></li>
-<li class="page_item page-item-25"><a href="http://localhost/wordpress/knowledge-centre/">Knowledge Centre</a></li>
-<li class="page_item page-item-27"><a href="stu_login.html">Login</a></li>
+<li class="page_item page-item-21"><a href="#">Industrial Visit</a></li>
+<li class="page_item page-item-23"><a href="quiz.html">Quiz</a></li>
+<li class="page_item page-item-25"><a href="kcenter.html">Knowledge Centre</a></li>
+<li class="page_item page-item-27"><a href="../index.html">Logout</a></li>
 </ul></div>
 			</nav>
 		</div>
@@ -93,11 +94,11 @@ body { font-size:14px; }
 			<div class="site-info container">
 				<nav id="footernav" class="footer-navigation" role="navigation">
 					<div id="footer-menu" class="menu"><ul>
-			<li class="page_item page-item-2"><a href="index.html">Home</a></li>
-			<li class="page_item page-item-21"><a href="form.html">Industrial Visit</a></li>
-			<li class="page_item page-item-23"><a href="http://localhost/wordpress/quiz-games/">Quiz / Games</a></li>
-			<li class="page_item page-item-25"><a href="http://localhost/wordpress/knowledge-centre/">Knowledge Centre</a></li>
-			<li class="page_item page-item-27"><a href="stu_login.html">Login</a></li>
+			<li class="page_item page-item-2"><a href="index.html"></a></li>
+			<li class="page_item page-item-21"><a href="#"></a></li>
+			<li class="page_item page-item-23"><a href="quiz.html"></a></li>
+			<li class="page_item page-item-25"><a href="kcenter.html"></a></li>
+			<li class="page_item page-item-27"><a href="stu_login.php"></a></li>
 			</ul></div>
 				</nav>
 		</footer>
@@ -111,11 +112,36 @@ body { font-size:14px; }
 
 <script type="text/javascript" src="./index_files/wp-embed.min.js.download"></script>
 
-<h1>CONTENT</h1>
+	<p class="title titlec">
+		Onsight Facilities
+	</p>
+	<p class="contentc">
+		SpaceNext tests its engines and structures at a 4,000-acre state-of-the-art rocket development facility in SriHarikota, Tamil Nadu. Every Merlin engine that powers the Falcon 9 rocket and every Draco thruster that controls the Dragon spacecraft is tested on one of 11 test stands. The Falcon 9 first stage is tested with all nine Merlin engines firing at 1.71 million pounds of thrust for up to three minutes—the same as actual flight duration. In addition, the facility is home to a dual Merlin test stand consisting of two independent engine testing bays, allowing SpaceX to test up to 400 Merlin engines a year. Established in 2003, the site now averages two tests per day
+	</p>
+	<p class="title titlec">
+		Exhibiton Center and Lab Visits
+	</p>
+	<p class="contentc">
+		A selection of Apollo 11 objects and their current descriptions are viewable in this grouping. Curators in the Museum's Space History Department are constantly acquiring information about objects in the collection and updating our records.
+		<br>
+		The lab has access to a metal-based 3D printer and is equipped with a suite of powerful microscopes, an X-ray CT machine and a range of furnaces. Mechanical testing such as tensile and micro-hardness testing is also performed.
+		Our laboratory aims to assess candidate materials and manufacturing processes for space missions, pre-screening them early in their development cycle. The results obtained helps guide us and the wider space industry in deciding where to focus future technology investments
+		A key aim of the laboratory is to exploit the expertise and world-leading facilities that are available on the Harwell Campus, to assess new material processes, joining techniques and 3D printing technologies for application in space.
+		We’ve already been using STFC’s ISIS pulsed spallation neutron source to investigate the structural integrity of friction stir welded titanium for use in spacecraft propellant tanks.  
+		Friction welding involves a high speed rubbing together of metal parts rather than the application of external heat to melt the parts. The technique should result in stronger welds. ISIS has allowed us to confirm this by measuring the internal stresses induced by the process to confirm the final weld quality.
 
-<div class="button header-button">
-	<a href="fac_login.html">Book Now</a>
+	</p>
+
+<div>
+	<a class="button header-button" onclick="alertf()" style="margin-bottom: 100px;">Book Now</a>
 </div>
+
+<script type="text/javascript">
+	function alertf()
+	{
+		alert("You need to be logged in as a faculty to book an Industrial Visit.");
+	}
+</script>
 
 
 </body>
