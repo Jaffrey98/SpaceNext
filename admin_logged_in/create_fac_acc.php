@@ -1,4 +1,4 @@
-<!-- faculty_logged_in -->
+
 <?php
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'spacenext');
@@ -9,17 +9,10 @@ $con = mysqli_connect(DB_HOST, DB_USER, DB_PASS) or die("Failed to connect to th
 
 $db = mysqli_select_db($con, DB_NAME) or die("Failed to connect to the database:".mysqli_error($con));
 
-	$sql = "SELECT * FROM reg_fac";
+	$sql = "SELECT * FROM reg_fac WHERE status=0 LIMIT 1";
 
 	$fac_data = mysqli_query($con,$sql);
 
-
-			while ($reg_fac=mysqli_fetch_assoc($fac_data)) {
-
-			
-				echo "<p>".$reg_fac['uname']."</p>  ";
-			
-			 }
 
 
 	// echo "
@@ -94,7 +87,23 @@ body { font-size:14px; }
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
 }
-</style></head>
+
+p{
+	visibility: hidden;
+}
+
+/*.tablec{
+	padding-left: 30px;
+	padding-right: 30px;
+}*/
+
+
+
+</style>
+
+
+
+</head>
 
 <body class="home blog hfeed" style="" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
 
@@ -159,10 +168,10 @@ body { font-size:14px; }
 
 
 <div>
-<div class="col-md-2"></div>
-<div class="col-md-8">
+<div class="col-md-1"></div>
+<div class="col-md-10">
 	<form class="form" action="create_fac_acc.php" method="post" style="margin-bottom: 50px">
-		<div class="row fields">
+		<!-- <div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Name:</label>
@@ -170,8 +179,8 @@ body { font-size:14px; }
 			<div class="col-md-5 ">
 				<input type="text" name="name" id="name_id" class="inputc" required>
 			</div>		
-		</div>
-		<div class="row fields">
+		</div> -->
+		<!-- <div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Email ID:</label>
@@ -180,19 +189,18 @@ body { font-size:14px; }
 				<input type="email" name="emailid" id="email_id_id" class="inputc" required>
 			</div>
 		</div>
-
-		<div class="row fields">
+ -->
+		<!-- <div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Phone No:</label>
 			</div>
 			<div class="col-md-5 ">
 				<input type="number" name="phoneno" id="phoneno_id" class="inputc" required>  
-				<!-- restrict to 10 digits -->
 			</div>	
-		</div>
+		</div> -->
 
-		<div class="row fields">
+	<!-- 	<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Address:</label>
@@ -203,9 +211,9 @@ body { font-size:14px; }
 				</textarea>
 				
 			</div>		
-		</div>
+		</div> -->
 		
-		<div class="row fields">
+		<!-- <div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Designation:</label>
@@ -214,8 +222,8 @@ body { font-size:14px; }
 				<input type="text" name="desg" id="desg_id" class="inputc" required>
 			</div>		
 		</div>
-
-		<div class="row fields">
+ -->
+		<!-- <div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Institute Name:</label>
@@ -224,6 +232,10 @@ body { font-size:14px; }
 				<input type="text" name="insname" id="insname_id" class="inputc" required >
 			</div>		
 		</div>
+ -->
+
+
+
 
 
 <!-- // document.getElementById("mytext").value = "My value";
@@ -240,7 +252,102 @@ body { font-size:14px; }
 				//value="<?php echo "".$reg_fac['uname']; ?>" -->
 
 
-		<br><br>
+
+<?php
+if (mysqli_num_rows($fac_data)) {
+
+	echo '<table class="tablec">
+						<tr>
+						<th>Name</th>
+						<th>Email ID</th>
+						<th>Phone no</th>
+						<th>Address</th>
+						<th>Institute Name</th>
+						<th>Designation</th>
+						<th> </th>
+						<th> </th>
+						</tr>
+				';
+
+
+				$reg_fac=mysqli_fetch_assoc($fac_data);
+
+				$sr_no = $reg_fac["sr_no"];
+				echo "<tr>";
+				echo "<th>".$reg_fac['uname']."</th>";
+				echo "<th>".$reg_fac['email_id']."</th>";
+				echo "<th>".$reg_fac['phone_no']."</th>";
+				echo "<th>".$reg_fac['address']."</th>";
+				echo "<th>".$reg_fac['ins_name']."</th>";
+				echo "<th>".$reg_fac['desg']."</th>";
+
+				echo '<th><input type="button" onclick="myFunctiona()" value="Accept" name="accept" /></th>';
+				echo '<th><input type="button" onclick="myFunctionr()" value="Reject" name="reject" /></th>';
+
+				echo "</tr>";
+
+			 
+
+
+
+// 	while ($reg_fac=mysqli_fetch_assoc($fac_data)) {
+// 				$sr_no = $reg_fac["sr_no"];
+// 				echo "<tr>";
+// 				echo "<th>".$reg_fac['uname']."</th>";
+// 				echo "<th>".$reg_fac['email_id']."</th>";
+// 				echo "<th>".$reg_fac['phone_no']."</th>";
+// 				echo "<th>".$reg_fac['address']."</th>";
+// 				echo "<th>".$reg_fac['ins_name']."</th>";
+// 				echo "<th>".$reg_fac['desg']."</th>";
+// 				// echo '<th><input type="button" onclick="accept()" value="Accept" name="accept" id="a'.$reg_fac["sr_no"].'"/></th>';
+// 				// echo '<th><input type="button" onclick="reject()" value="Reject" name="reject" id="r'.$reg_fac["sr_no"].'"/></th>';
+
+// echo '<th><input type="button" onclick="myFunctiona()" value="Accept" name="accept" /></th>';
+// echo '<th><input type="button" onclick="myFunctionr()" value="Reject" name="reject" /></th>';
+// // echo '<th><input type="button" onclick="myFunction()" value="Reject" name="reject" /></th>';
+
+
+// 				echo "</tr>";
+// 				echo '<p id="demo'.$sr_no.'">'.$sr_no.'</p>';
+
+// 			 }
+
+
+		echo "</table>";
+}
+else
+{
+	echo '<div style="font-size:25px;margin-left:400px;">No New Applications!</div>';
+}
+?>
+
+<script>
+
+function myFunctiona() {
+	console.log("a");
+	<?php
+		$sql = "UPDATE reg_fac SET status = 1 WHERE sr_no = $sr_no";
+		$update_fac = mysqli_query($con,$sql);
+	?>
+	alert("Action Performed. Please refresh the page.");
+}
+
+function myFunctionr() {
+
+	console.log("r");
+	<?php
+		$sql = "UPDATE reg_fac SET status = 2 WHERE sr_no = $sr_no";
+		$update_fac = mysqli_query($con,$sql);
+	?>
+	alert("Action Performed. Please refresh the page.");
+}
+
+
+</script>
+
+
+
+		<!-- <br><br>
 		<div class="row">
 			<div class="col-md-3">
 				
@@ -260,7 +367,7 @@ body { font-size:14px; }
 				
 			</div>
 			
-		</div>
+		</div> -->
 			
 
 		
