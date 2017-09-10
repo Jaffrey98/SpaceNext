@@ -108,11 +108,11 @@ body { font-size:14px; }
 			<div class="site-info container">
 				<nav id="footernav" class="footer-navigation" role="navigation">
 					<div id="footer-menu" class="menu"><ul>
-			<li class="page_item page-item-2"><a href="index.html">Home</a></li>
-			<li class="page_item page-item-21"><a href="industrial_visit.html">Industrial Visit</a></li>
-			<li class="page_item page-item-23"><a href="#">Quiz</a></li>
-			<li class="page_item page-item-25"><a href="#">Knowledge Centre</a></li>
-			<li class="page_item page-item-27"><a href="stu_login.html">Login</a></li>
+			<li class="page_item page-item-2"><a href="index.html"></a></li>
+			<li class="page_item page-item-21"><a href="industrial_visit.html"></a></li>
+			<li class="page_item page-item-23"><a href="#"></a></li>
+			<li class="page_item page-item-25"><a href="#"></a></li>
+			<li class="page_item page-item-27"><a href="stu_login.html"></a></li>
 			</ul></div>
 				</nav>
 		</footer>
@@ -168,7 +168,7 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 
-				<input type="number" name="phoneno" class="inputc" required id="phoneno" style="color: black">  
+				<input type="number" name="phoneno" class="inputc" required id="phoneno" style="color: black">
 				<!-- restrict to 10 digits -->
 			</div>
 		</div>
@@ -221,16 +221,16 @@ body { font-size:14px; }
 			<br>
 			<br>
 
-          
 
-			
-			
+
+
+
 			<br><br>
 			<br>
 
 			<div class="col-md-5"></div>
 			<div>
-				<input type="submit" id="submit_button" value="Submit" name="submit" class="submit_button" />  
+				<input type="submit" id="submit_button" value="Submit" name="submit" class="submit_button" />
 			</div>
 			<br><br>
 			<br><br>
@@ -238,23 +238,23 @@ body { font-size:14px; }
 
 			<!-- just add to database in faculty table with confirmed value 0 -->
 	</form>
-		
-		
+
+
 		<div class="col-md-4 "></div>
 		<button onclick="validate_phone_no()" class="validate_button">Validate Phone No.</button>
 
 </div>
 
 <script type="text/javascript">
-	
+
 function validate_phone_no() {
-	
+
 
 	var y = document.getElementsByName("phoneno")[0].value;
 	var phoneno = Number(y);
 
 
-	if (phoneno>999999999&&phoneno<=9999999999) 
+	if (phoneno>999999999&&phoneno<=9999999999)
 	{
 		var d = document.getElementById("submit_button");
 		d.classList.toggle("show_button");
@@ -264,9 +264,9 @@ function validate_phone_no() {
 		alert("Enter a valid Phone Number!!");
 
 	}
-	
 
-	
+
+
 
 }
 </script>
