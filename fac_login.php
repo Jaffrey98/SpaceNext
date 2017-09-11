@@ -169,13 +169,17 @@ body { font-size:14px; }
                 // $email = $_POST['email'];
                 $pass = $_POST['pass'];
                 // echo "before insert declartion"."<br>";
-                $query =mysqli_query($con, "SELECT * FROM reg_fac WHERE uname='$_POST[uname]' AND pass = '$_POST[pass]'") or die(mysqli_error($con));
+                $query =mysqli_query($con, "SELECT * FROM reg_fac WHERE uname='$_POST[uname]' AND pass = '$_POST[pass]' AND status=1") or die(mysqli_error($con));
                 // var_dump($query);
                 // echo "after insert declartion"."<br>";
                 // $data = mysqli_fetch_array($query) or die(mysqli_error($con));
                 // echo "after insert query fired"."<br>";
                 // var_dump($data);
                 if($data = mysqli_fetch_array($query)){
+                    $del_sql="DELETE * from logged_in";
+                    $insert_sql="INSERT into logged_in (id,name,type) VALUES ('$uname','$email','$pass',0)";
+                    mysqli_query($con,$del_sql);
+                    mysqli_query($con,$insert_sql);
                      $GLOBALS['flag']=1;
                     echo "<center><p style='color:#F5F9F8;font-family:Verdana;'>Login Successfull!<br/>You will be redirected to your page shortly
                                 </p></center>";

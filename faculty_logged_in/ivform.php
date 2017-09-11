@@ -9,8 +9,10 @@ $con = mysqli_connect(DB_HOST, DB_USER, DB_PASS) or die("Failed to connect to th
 
 $db = mysqli_select_db($con, DB_NAME) or die("Failed to connect to the database:".mysqli_error($con));
 
-$id=(mysqli_query($con,"SELECT id from logged_in"));
-echo (string)$id;
+$sql="SELECT * from fac_reg where sr_no=(SELECT id from logged_in)";
+$fac_det=(mysqli_query($con,$sql);
+
+// echo (string)$id;
 // $uname=(mysqli_query($con,"SELECT uname from reg_fac where sr_no=$id"));
 // $desg=mysqli_query($con,"SELECT desg from reg_fac where sr_no=$id");
 // $ins_name=mysqli_query($con,"SELECT ins_name from reg_fac where sr_no=$id");
@@ -185,6 +187,17 @@ body { font-size:14px; }
 
             		</script>
 
+                    <div class="row fields">
+                        <div class="col-md-3"></div>
+                            <div class="col-md-2">
+                                <label >Date:</label>
+                            </div>
+                            <div class="col-md-5 ">
+                                <input type="date" name="date" class="inputc" required style="color: black">
+                            </div>
+                    </div>
+
+
 		<div class="row fields">
 			<div class="col-md-3"></div>
 				<div class="col-md-2">
@@ -194,6 +207,7 @@ body { font-size:14px; }
 					<input type="number" name="nstudents" class="inputc" required style="color: black">
 				</div>
 		</div>
+
 		<br>
 		<div class="row fields">
 			<div class="col-md-4"></div>

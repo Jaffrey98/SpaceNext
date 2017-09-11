@@ -14,13 +14,19 @@ function signup($con)
 	// echo "hello signup"."<br>";
 	if (!empty($_POST['name'])) {
 		// echo "inside first if"."<br>";
-		$query = mysqli_query($con, "SELECT * FROM reg_stud WHERE uname = '$_POST[name]' AND pass = '$_POST[pass]'") or die(mysqli_error($con));
-		if (!$row = mysqli_fetch_array($query) or die(mysqli_error($con))) {
+		$query = mysqli_query($con, "SELECT * FROM reg_fac WHERE uname = '$_POST[name]' AND pass = '$_POST[pass]'") or die(mysqli_error($con));
+		if (!$row = mysqli_fetch_array($query)) {
 			// echo "inside second if"."<br>";
 			NewUser($con);
 		}
-		else
-			echo "Sorry, you are already registered."."<br>";
+		else{
+			// $query = mysqli_query($con, "SELECT * FROM reg_fac WHERE uname = '$_POST[uname]' AND pass = '$_POST[pass]'") or die(mysqli_error($con));
+			echo '<script type="text/javascript">
+		         	alert("User already exists!!");
+		      </script>';
+			// echo "inside second if"."<br>";
+			// NewUser($con);
+		}
 	}
 }
 
