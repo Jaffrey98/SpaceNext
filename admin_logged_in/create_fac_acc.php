@@ -170,87 +170,6 @@ p{
 <div>
 <div class="col-md-1"></div>
 <div class="col-md-10">
-	<form class="form" action="create_fac_acc.php" method="post" style="margin-bottom: 50px">
-		<!-- <div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Name:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="text" name="name" id="name_id" class="inputc" required>
-			</div>
-		</div> -->
-		<!-- <div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Email ID:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="email" name="emailid" id="email_id_id" class="inputc" required>
-			</div>
-		</div>
- -->
-		<!-- <div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Phone No:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="number" name="phoneno" id="phoneno_id" class="inputc" required>
-			</div>
-		</div> -->
-
-	<!-- 	<div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Address:</label>
-			</div>
-			<div class="col-md-5 ">
-				<textarea name="address" class="inputc" id="address_id" required="true" style="height: 100px;">
-
-				</textarea>
-
-			</div>
-		</div> -->
-
-		<!-- <div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Designation:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="text" name="desg" id="desg_id" class="inputc" required>
-			</div>
-		</div>
- -->
-		<!-- <div class="row fields">
-		<div class="col-md-3"></div>
-			<div class="col-md-2">
-				<label >Institute Name:</label>
-			</div>
-			<div class="col-md-5 ">
-				<input type="text" name="insname" id="insname_id" class="inputc" required >
-			</div>
-		</div>
- -->
-
-
-
-
-
-<!-- // document.getElementById("mytext").value = "My value";
-// echo "<script>
-				// 	// document.getElementById("name_id").value =".$reg_fac['uname']."
-				// </script>
-				// ";
-
-				// $nid = name_id;
-
-				// $nid = $divId=get_the_ID();
-
-
-				//value="<?php echo "".$reg_fac['uname']; ?>" -->
-
 
 
 <?php
@@ -281,36 +200,10 @@ if (mysqli_num_rows($fac_data)) {
 				echo "<th>".$reg_fac['ins_name']."</th>";
 				echo "<th>".$reg_fac['desg']."</th>";
 
-				echo '<th><input type="button" onclick="myFunctiona()" value="Accept" name="accept" /></th>';
-				echo '<th><input type="button" onclick="myFunctionr()" value="Reject" name="reject" /></th>';
+				echo '<th><form action="accept.php" method="post"><input type="submit"  value="Accept" name="accept" /></form></th>';
+				echo '<th><form action="reject.php" method="post"><input type="submit"  value="Reject" name="reject" /></form></th>';
 
 				echo "</tr>";
-
-
-
-
-
-// 	while ($reg_fac=mysqli_fetch_assoc($fac_data)) {
-// 				$sr_no = $reg_fac["sr_no"];
-// 				echo "<tr>";
-// 				echo "<th>".$reg_fac['uname']."</th>";
-// 				echo "<th>".$reg_fac['email_id']."</th>";
-// 				echo "<th>".$reg_fac['phone_no']."</th>";
-// 				echo "<th>".$reg_fac['address']."</th>";
-// 				echo "<th>".$reg_fac['ins_name']."</th>";
-// 				echo "<th>".$reg_fac['desg']."</th>";
-// 				// echo '<th><input type="button" onclick="accept()" value="Accept" name="accept" id="a'.$reg_fac["sr_no"].'"/></th>';
-// 				// echo '<th><input type="button" onclick="reject()" value="Reject" name="reject" id="r'.$reg_fac["sr_no"].'"/></th>';
-
-// echo '<th><input type="button" onclick="myFunctiona()" value="Accept" name="accept" /></th>';
-// echo '<th><input type="button" onclick="myFunctionr()" value="Reject" name="reject" /></th>';
-// // echo '<th><input type="button" onclick="myFunction()" value="Reject" name="reject" /></th>';
-
-
-// 				echo "</tr>";
-// 				echo '<p id="demo'.$sr_no.'">'.$sr_no.'</p>';
-
-// 			 }
 
 
 		echo "</table>";
@@ -321,69 +214,8 @@ else
 }
 ?>
 
-<script>
-// alert('hello');
-
-function myFunctionr() {
-	console.log("r");
-    document.write("hello");
-	<?php
-		// echo"<script>
-		// console.log('r');
-		// </script>";
-		$sql = "UPDATE reg_fac SET status = 2 WHERE sr_no = $sr_no";
-		$update_fac = mysqli_query($con,$sql);
-	?>
-	alert("Action Performed. Please refresh the page.");
-}
-
-function myFunctiona() {
-	alert("a");
-	<?php
-        // echo"<script>
-        // console.log('a');
-        // </script>";
-        echo"console.log('a');";
-		$sql = "UPDATE reg_fac SET status = 1 WHERE sr_no = $sr_no";
-		$update_fac = mysqli_query($con,$sql);
-	?>
-	alert("Action Performed. Please refresh the page.");
-}
 
 
-
-
-</script>
-
-
-
-		<!-- <br><br>
-		<div class="row">
-			<div class="col-md-3">
-
-			</div>
-			<div class="col-md-8">
-				<div class="row fields">
-					<div class="col-md-3">
-						<input type="submit" value="Accept" name="accept" />
-					</div>
-					<div class="col-md-3"></div>
-					<div class="col-md-3">
-						<input type="submit" value="Decline" name="decline" />
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-
-			</div>
-
-		</div> -->
-
-
-
-
-			<!-- just add to database in faculty table -->
-	</form>
 
 
 </div>
