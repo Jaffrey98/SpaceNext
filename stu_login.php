@@ -175,9 +175,23 @@ body { font-size:14px; }
 				// echo "after insert query fired"."<br>";
 				// var_dump($data);
 				if($data = mysqli_fetch_array($query)){
-					 $GLOBALS['flag']=1;
-			        echo "<center><p style='color:#F5F9F8;font-family:Verdana;'>Login Successfull!<br/>You will be redirected to your page shortly
-								</p></center>";
+					$GLOBALS['flag']=1;
+                    $result=mysqli_query($con,"SELECT * from reg_stud where uname='$_POST[uname]' AND pass = '$_POST[pass]'");
+					$id=mysqli_fetch_assoc($result);
+	 				$sr_no = $id["sr_no"];
+					$type="student";
+					// echo "<table>";
+					// echo "<tr>";
+					// echo "<th>".$id['sr_no']."</th>";
+					// echo "</tr>";
+					// echo "</table>";
+
+					$del_q="DELETE FROM logged_in";
+					$del=mysqli_query($con,$del_q);
+
+					$ins_q="INSERT INTO logged_in (id,name,type) VALUES ($sr_no,'$uname','$type')";
+                    $login_q=mysqli_query($con,$ins_q);
+			        echo "<center><p style='color:#F5F9F8;font-family:Verdana;'>Login Successfull!<br/>You will be redirected to your page shortly</p></center>";
 				}
 				else{
 					echo "<center><p style='color:#F5F9F8;font-family:Verdana;'>Login Unsuccessfull!<br/>Try Again
@@ -191,10 +205,10 @@ body { font-size:14px; }
 				// echo "Sign up complete";
 				// echo $flag;
 				if($flag==1) {
-					echo '<script type="text/javascript">
-				         	setTimeout(function redirect() {
-								window.location.replace("student_logged_in/index.html");},2500);
-				      </script>';
+					// echo '<script type="text/javascript">
+				    //      	setTimeout(function redirect() {
+					// 			window.location.replace("student_logged_in/index.html");},2500);
+				    //   </script>';
 				}
 				// header('Location:student_logged_in/index.html');
 			}

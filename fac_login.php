@@ -169,14 +169,29 @@ body { font-size:14px; }
                 // $email = $_POST['email'];
                 $pass = $_POST['pass'];
                 // echo "before insert declartion"."<br>";
-                $query =mysqli_query($con, "SELECT * FROM reg_fac WHERE uname='$_POST[uname]' AND pass = '$_POST[pass]'") or die(mysqli_error($con));
+                $query =mysqli_query($con, "SELECT * FROM reg_fac WHERE uname='$_POST[uname]' AND pass = '$_POST[pass]' AND status=1");
                 // var_dump($query);
                 // echo "after insert declartion"."<br>";
                 // $data = mysqli_fetch_array($query) or die(mysqli_error($con));
                 // echo "after insert query fired"."<br>";
                 // var_dump($data);
                 if($data = mysqli_fetch_array($query)){
-                     $GLOBALS['flag']=1;
+                    $GLOBALS['flag']=1;
+                    $result=mysqli_query($con,"SELECT * from reg_fac where uname='$_POST[uname]' AND pass = '$_POST[pass]'");
+                    $id=mysqli_fetch_assoc($result);
+                    $sr_no = $id["sr_no"];
+                    $type="faculty";
+                    // echo "<table>";
+                    // echo "<tr>";
+                    // echo "<th>".$id['sr_no']."</th>";
+                    // echo "</tr>";
+                    // echo "</table>";
+
+                    $del_q="DELETE FROM logged_in";
+                    $del=mysqli_query($con,$del_q);
+
+                    $ins_q="INSERT INTO logged_in (id,name,type) VALUES ($sr_no,'$uname','$type')";
+                    $login_q=mysqli_query($con,$ins_q);
                     echo "<center><p style='color:#F5F9F8;font-family:Verdana;'>Login Successfull!<br/>You will be redirected to your page shortly
                                 </p></center>";
                 }

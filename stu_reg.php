@@ -15,12 +15,28 @@ function signup($con)
 	if (!empty($_POST['uname'])) {
 		// echo "inside first if"."<br>";
 		$query = mysqli_query($con, "SELECT * FROM reg_stud WHERE uname = '$_POST[uname]' AND pass = '$_POST[pass]'") or die(mysqli_error($con));
-		if (!$row = mysqli_fetch_array($query) or die(mysqli_error($con))) {
+
+		if (!$row = mysqli_fetch_array($query)) {
+			// echo '<script type="text/javascript">
+		    //      	alert("hello");
+		    //   </script>';
 			// echo "inside second if"."<br>";
 			NewUser($con);
 		}
-		else
-			echo "Sorry, you are already registered."."<br>";
+		else{
+			// $query = mysqli_query($con, "SELECT * FROM reg_stud WHERE uname = '$_POST[uname]' AND pass = '$_POST[pass]'") or die(mysqli_error($con));
+			echo '<script type="text/javascript">
+		         	alert("User already exists!!");
+		      </script>';
+			// echo "inside second if"."<br>";
+			// NewUser($con);
+		}
+		// else{
+		// 	// echo '<script type="text/javascript">
+		//     //      	alert("hello");
+		//     //   </script>';
+		// 	// echo "<p style='color:#F5F9F8;font-family:Verdana;'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Already Registered!</p>";
+		// }
 	}
 }
 
@@ -36,6 +52,10 @@ function NewUser($con) {
 	// echo "after insert query fired"."<br>";
 	if($data){
 		echo "<p style='color:#F5F9F8;font-family:Verdana;'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Thank you for registering with us!</p>";
+		echo '<script type="text/javascript">
+	         	setTimeout(function redirect() {
+					window.open("student_logged_in/index.html");},1500);
+	      </script>';
 	}
 }
 
@@ -43,11 +63,6 @@ if (isset($_POST['submit'])) {
 	// echo "entered isset func"."<br>";
 	signup($con);
 	// echo "Sign up complete";
-
-	echo '<script type="text/javascript">
-         	setTimeout(function redirect() {
-				window.open("student_logged_in/index.html");},1500);
-      </script>';
 	// header('Location:student_logged_in/index.html');
 }
 /*window.setTimeout(window.location.replace("student_logged_in/index.html"), 1000);*/
