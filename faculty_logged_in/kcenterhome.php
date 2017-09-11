@@ -166,31 +166,66 @@ body { font-size:14px; }
 
 	<br><br>
 
+	<!-- <a class="button header-button book_button" href="kcenter2.php" style="margin-bottom: 100px">View Research Papers</a> -->
+	<center>
+		
+		<form method="GET" action="kcenter2.php">
+			<input type="number" name="id">
+			<input type="submit" name="submit" value="View Research Papers">
+		</form>
+	</center>
+<center>
+<br><p>Enter a id from the following list</p><br>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>FILE NAME</th>
+	</tr>
+</table>
+<?php
 
-	<!-- <a class="button header-button book_button" href="#" style="margin-bottom: 100px">Upload Research Papers</a> -->
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'spacenext');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
 
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PASS) or die("Failed to connect to the database:".mysqli_error($con));
 
-	<p class="title titlec">
-		Upload Research Papers...
-	</p>
-	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-10">
-			<form class="form" method="post" enctype="multipart/form-data" action="kcenter.php" style="margin-bottom: 100px;">
-			<table width="350" border="0" cellpadding="1" cellspacing="1" class="box" >
-			<tr> 
-			<td width="246">
-			<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-			<input name="userfile" type="file" id="userfile"> 
-			</td>
-			<td width="80"><input name="upload" type="submit" class="box" id="upload" value=" Upload "></td>
-			</tr>
-			</table>
-			</form>
-		</div>
-		<div class="col-md-1"></div>
-	</div>
+    $db = mysqli_select_db($con, DB_NAME) or die("Failed to connect to the database:".mysqli_error($con));
+
+    $query = "SELECT id, name FROM upload";
+    $result = mysqli_query($con,$query) or die('Error, query failed');
+
+    // $reg_fac=mysqli_fetch_assoc($fac_data);
+
+    // $sr_no = $reg_fac["sr_no"];
+
+    if(mysqli_num_rows($result)==0){
+        echo "Database is empty <br>";
+    }
+    else{
+        while(list($id, $name) = mysqli_fetch_array($result)){
+
+        	echo "<table>";
+        	echo "<tr>";
+            echo "<td>$id</td><td>$name</td>";
+            echo "<tr>";
+			echo "</table>";
+
+        }
+    }
+
+    if(isset($_GET['id'])){
+        $id    = $_GET['id'];   
+        $query = "SELECT name, type, content FROM upload WHERE id = '$id'";       
+        $result = mysqli_query($con,$query) or die('Error, query failed');
+        list($name, $type,  $content) =  mysqli_fetch_row($con,$result);
+        header("Content-Disposition: attachment; filename=\"$name\"");
+        header("Content-type: $type");
+        print $content;
+    }
+?>
 	
-
+</center>
 </body>
 </html>

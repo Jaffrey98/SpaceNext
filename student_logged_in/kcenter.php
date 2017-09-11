@@ -1,3 +1,5 @@
+<!-- faculty_logged_in -->
+
 <!DOCTYPE html>
 <!-- saved from url=(0027)http://localhost/wordpress/ -->
 <html lang="en-US" class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,9 +11,10 @@
 <title>SpaceNext</title>
 <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
 <link rel="dns-prefetch" href="http://s.w.org/">
-<link rel="stylesheet" type="text/css" href="form.css">
+<link rel="stylesheet" type="text/css" href="fac_login.css">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Feed" href="http://localhost/wordpress/feed/">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Comments Feed" href="http://localhost/wordpress/comments/feed/">
+<link rel="stylesheet" type="text/css" href="fac_login.css">
 <link rel="stylesheet" id="bootstrap-css" href="./index_files/bootstrap.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="astrid-style-css" href="./index_files/style.css" type="text/css" media="all">
 <style id="astrid-style-inline-css" type="text/css">
@@ -43,8 +46,8 @@ body { font-size:14px; }
 <link rel="https://api.w.org/" href="http://localhost/wordpress/wp-json/">
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/wordpress/xmlrpc.php?rsd">
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost/wordpress/wp-includes/wlwmanifest.xml">
-<link rel="stylesheet" type="text/css" href="industrial_visit.css">
 <meta name="generator" content="WordPress 4.8.1">
+<link rel="stylesheet" type="text/css" href="industrial_visit.css">
 <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
 .en-markup-crop-options {
     top: 18px !important;
@@ -79,9 +82,9 @@ body { font-size:14px; }
 			<nav id="mainnav" class="main-navigation col-md-8 col-sm-6 col-xs-12" role="navigation">
 				<div id="primary-menu" class="menu"><ul>
 <li class="page_item page-item-2"><a href="index.html">Home</a></li>
-<li class="page_item page-item-21"><a href="#">Industrial Visit</a></li>
+<li class="page_item page-item-21"><a href="industrial_visit.html">Industrial Visit</a></li>
 <li class="page_item page-item-23"><a href="quiz.html">Quiz</a></li>
-<li class="page_item page-item-25"><a href="kcenterhome.php">Knowledge Centre</a></li>
+<li class="page_item page-item-25"><a href="#">Knowledge Centre</a></li>
 <li class="page_item page-item-27"><a href="../index.html">Logout</a></li>
 </ul></div>
 			</nav>
@@ -90,18 +93,18 @@ body { font-size:14px; }
 			<div class="header-image">
 
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class="site-info container">
-				<nav id="footernav" class="footer-navigation" role="navigation">
-					<div id="footer-menu" class="menu"><ul>
-			<li class="page_item page-item-2"><a href="index.html"></a></li>
-			<li class="page_item page-item-21"><a href="#"></a></li>
-			<li class="page_item page-item-23"><a href="quiz.html"></a></li>
-			<li class="page_item page-item-25"><a href="kcenter.html"></a></li>
-			<li class="page_item page-item-27"><a href="stu_login.php"></a></li>
-			</ul></div>
-				</nav>
-		</footer>
+                <footer id="colophon" class="site-footer" role="contentinfo">
+        			<div class="site-info container">
+        				<nav id="footernav" class="footer-navigation" role="navigation">
+        					<div id="footer-menu" class="menu"><ul>
+        			<li class="page_item page-item-2"><a href="index.html"></a></li>
+        			<li class="page_item page-item-21"><a href="industrial_visit.html"></a></li>
+        			<li class="page_item page-item-23"><a href="#"></a></li>
+        			<li class="page_item page-item-25"><a href="#"></a></li>
+        			<li class="page_item page-item-27"><a href="stu_login.html"></a></li>
+        			</ul></div>
+        				</nav>
+        		</footer>
 
 		</div>
 </div>
@@ -112,36 +115,37 @@ body { font-size:14px; }
 
 <script type="text/javascript" src="./index_files/wp-embed.min.js.download"></script>
 
-	<p class="title titlec">
-		Onsight Facilities
-	</p>
-	<p class="contentc">
-		SpaceNext tests its engines and structures at a 4,000-acre state-of-the-art rocket development facility in SriHarikota, Tamil Nadu. Every Merlin engine that powers the Falcon 9 rocket and every Draco thruster that controls the Dragon spacecraft is tested on one of 11 test stands. The Falcon 9 first stage is tested with all nine Merlin engines firing at 1.71 million pounds of thrust for up to three minutes—the same as actual flight duration. In addition, the facility is home to a dual Merlin test stand consisting of two independent engine testing bays, allowing SpaceX to test up to 400 Merlin engines a year. Established in 2003, the site now averages two tests per day
-	</p>
-	<p class="title titlec">
-		Exhibiton Center and Lab Visits
-	</p>
-	<p class="contentc">
-		A selection of Apollo 11 objects and their current descriptions are viewable in this grouping. Curators in the Museum's Space History Department are constantly acquiring information about objects in the collection and updating our records.
-		<br>
-		The lab has access to a metal-based 3D printer and is equipped with a suite of powerful microscopes, an X-ray CT machine and a range of furnaces. Mechanical testing such as tensile and micro-hardness testing is also performed.
-		Our laboratory aims to assess candidate materials and manufacturing processes for space missions, pre-screening them early in their development cycle. The results obtained helps guide us and the wider space industry in deciding where to focus future technology investments
-		A key aim of the laboratory is to exploit the expertise and world-leading facilities that are available on the Harwell Campus, to assess new material processes, joining techniques and 3D printing technologies for application in space.
-		We’ve already been using STFC’s ISIS pulsed spallation neutron source to investigate the structural integrity of friction stir welded titanium for use in spacecraft propellant tanks.  
-		Friction welding involves a high speed rubbing together of metal parts rather than the application of external heat to melt the parts. The technique should result in stronger welds. ISIS has allowed us to confirm this by measuring the internal stresses induced by the process to confirm the final weld quality.
+<?php
+	define('DB_HOST', 'localhost');
+	define('DB_NAME', 'spacenext');
+	define('DB_USER', 'root');
+	define('DB_PASS', '');
 
-	</p>
+	$con = mysqli_connect(DB_HOST, DB_USER, DB_PASS) or die("Failed to connect to the database:".mysqli_error($con));
 
-<div>
-	<a class="button header-button book_button" onclick="alertf()" style="margin-bottom: 100px;">Book Now</a>
-</div>
+	$db = mysqli_select_db($con, DB_NAME) or die("Failed to connect to the database:".mysqli_error($con));
 
-<script type="text/javascript">
-	function alertf()
-	{
-		alert("You need to be logged in as a faculty to book an Industrial Visit.");
-	}
-</script>
+
+		$query = "SELECT id, name, content FROM upload";
+		$result = mysqli_query($con,$query) or die('Error, query failed');
+		$row = mysqli_fetch_array($result);
+		// header("Content-type: " . $row["type"]);
+		// echo $row["content"];
+		$data = $row["content"];
+		echo '<a href="download.php?id=1">Download</a>';
+
+		// $row = mysqli_fetch_assoc($result);
+
+		// $content = $row["content"];
+
+	// $bytes = $row[3];
+	// 	header("Content-type: application/pdf");
+	// 	header('Content-disposition: attachment; filename="new.pdf"');
+	// 	print $content;
+
+?>
+
+
 
 
 </body>

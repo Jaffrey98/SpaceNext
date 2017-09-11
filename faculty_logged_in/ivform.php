@@ -64,6 +64,7 @@ body { font-size:14px; }
 <script type="text/javascript" src="./index_files/jquery.js.download"></script>
 <script type="text/javascript" src="./index_files/jquery-migrate.min.js.download"></script>
 <link rel="https://api.w.org/" href="http://localhost/wordpress/wp-json/">
+<link rel="stylesheet" type="text/css" href="fac_login.css">
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/wordpress/xmlrpc.php?rsd">
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost/wordpress/wp-includes/wlwmanifest.xml">
 <meta name="generator" content="WordPress 4.8.1">
@@ -175,14 +176,12 @@ body { font-size:14px; }
 	</p>
 	<center>
 		
-	<p class="title titlec">
-		Scroll down for form...
-	</p> 
+	<a class="button header-button book_button" href="#apply">Apply</a>
 	</center>
 
 
 
-	<form class="form" action="ivform_sub.php" method="post" style="margin-top: 250px; ">
+	<form class="form" action="ivform_sub.php" method="post" id="apply" style="margin-top: 250px; margin-bottom: 100px; ">
 		<div class="row fields">
 			<div class="col-md-3"></div>
 			<div class="col-md-2">
