@@ -85,6 +85,22 @@ body { font-size:14px; }
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
 }
+
+.titlec{
+	font-size: 35px;
+	margin-top: 40px;
+	margin-left: 25px;
+	font-style: oblique;
+}
+
+.contentc{
+	font-size: 35px;
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
 </style></head>
 
 <body class="home blog hfeed" style="" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
@@ -141,7 +157,32 @@ body { font-size:14px; }
 <div>
 <div class="col-md-2"></div>
 <div class="col-md-8">
-	<form class="form" action="ivform_sub.php" method="post">
+
+
+	<p class="title titlec">
+		Instructions
+	</p> 
+	<p class="contentc" >
+		<ol>
+			<li>The Applicant is expected to fill all the mandatory fields mentioned in the application form.</li>
+			<li>SpaceNext awards scholarships in the form of discounts in the IV fees to the student who deliver exceptional performance in the SpaceNext quizzes.</li>
+			<li>The Faculty must confirm whether any of the student members who have won such scholarships are also a part of the IV team.</li>
+			<li>If so then the IV Fees displayed to the Faculty will be inclusive of these discounts.</li>
+			<li>Student username is the username issued to the Student by the SpaceNext Website after registration.</li>
+			<li>The Faculty is 	requested to confirm the username from the students before.</li>
+			<li>For students who are not officially registered on the website only student name is expected to be provided. </li>
+		</ol>
+	</p>
+	<center>
+		
+	<p class="title titlec">
+		Scroll down for form...
+	</p> 
+	</center>
+
+
+
+	<form class="form" action="ivform_sub.php" method="post" style="margin-top: 250px; ">
 		<div class="row fields">
 			<div class="col-md-3"></div>
 			<div class="col-md-2">
