@@ -1,0 +1,34 @@
+// document.getElementById('fname').value="<?php echo $fac_det['uname']?>";
+// document.getElementById('desg').value="<?php echo $fac_det['desg']?>";
+// document.getElementById('insname').value="<?php echo $fac_det['ins_name'] ?>";
+// document.getElementById('address').value="<?php echo $fac_det['address'] ?>";
+
+document.getElementById('desgid').value="<?php echo $fac_det['desg']?>";
+
+document.getElementById('addressid').value="<?php echo $fac_det['address']?>";
+
+
+document.getElementById('fnameid').value="<?php echo $fac_det['uname']?>";
+document.getElementById('desgid').value="<?php echo $fac_det['desg']?>";
+document.getElementById('insnameid').value="<?php echo $fac_det['ins_name']?>";
+document.getElementById('addressid').value="<?php echo $fac_det['address']?>";
+
+function create_iv($con)
+{
+	$fname = $_POST['fname'];
+	$fid = $_POST['fid'];
+	$desg = $_POST['desg'];
+	$insname = $_POST['insname'];
+	$address = $_POST['address'];
+	$nstudents = $_POST['nstudents'];
+	$sn_name=$_POST['sn_name'];
+	$sn_id=$_POST['sn_id'];
+	$t_name="ids".rand(1,10000);
+	echo "string";
+
+}
+
+?>
+
+
+CREATE TABLE `spacenext`. ( `id` INT NOT NULL AUTO_INCREMENT , `fac_sr_no` INT NOT NULL , `st_name` VARCHAR(25) NOT NULL , `st_uname` VARCHAR(25) NOT NULL , `cost` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

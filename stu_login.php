@@ -205,10 +205,10 @@ body { font-size:14px; }
 				// echo "Sign up complete";
 				// echo $flag;
 				if($flag==1) {
-					// echo '<script type="text/javascript">
-				    //      	setTimeout(function redirect() {
-					// 			window.location.replace("student_logged_in/index.html");},2500);
-				    //   </script>';
+					echo '<script type="text/javascript">
+				         	setTimeout(function redirect() {
+								window.location.replace("student_logged_in/index.html");},2500);
+				      </script>';
 				}
 				// header('Location:student_logged_in/index.html');
 			}

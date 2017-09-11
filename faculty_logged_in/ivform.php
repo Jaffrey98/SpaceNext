@@ -9,8 +9,9 @@ $con = mysqli_connect(DB_HOST, DB_USER, DB_PASS) or die("Failed to connect to th
 
 $db = mysqli_select_db($con, DB_NAME) or die("Failed to connect to the database:".mysqli_error($con));
 
-$sql="SELECT * from fac_reg where sr_no=(SELECT id from logged_in)";
-$fac_det=(mysqli_query($con,$sql);
+$sql="SELECT * FROM reg_fac WHERE sr_no=(SELECT id FROM logged_in)";
+$res=(mysqli_query($con,$sql));
+$fac_det=mysqli_fetch_assoc($res);
 
 // echo (string)$id;
 // $uname=(mysqli_query($con,"SELECT uname from reg_fac where sr_no=$id"));
@@ -140,7 +141,7 @@ body { font-size:14px; }
 <div>
 <div class="col-md-2"></div>
 <div class="col-md-8">
-	<form class="form" action="ivform.php" method="post">
+	<form class="form" action="ivform_sub.php" method="post">
 		<div class="row fields">
 			<div class="col-md-3"></div>
 			<div class="col-md-2">
@@ -150,7 +151,7 @@ body { font-size:14px; }
 				<input type="text" name="fname" id="fnameid" class="inputc" required readonly>
 			</div>
 		</div>
-		<div class="row fields">
+		<!-- <div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Designation:</label>
@@ -158,7 +159,7 @@ body { font-size:14px; }
 			<div class="col-md-5 ">
 				<input type="text" name="desg" id="desgid" class="inputc" required readonly>
 			</div>
-		</div>
+		</div> -->
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
@@ -168,7 +169,7 @@ body { font-size:14px; }
 				<input type="text" name="insname" id="insnameid" class="inputc" required readonly>
 			</div>
 		</div>
-		<div class="row fields">
+		<!-- <div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Address:</label>
@@ -176,15 +177,11 @@ body { font-size:14px; }
 			<div class="col-md-5 ">
 				<input type="text" name="address" id="addressid" class="inputc" required readonly>
 			</div>
-		</div>
+		</div> -->
 
             		<script>
-
-            		document.getElementById('fname').value=<?php echo $uname  ?>;
-            		document.getElementById('desg').value=<?php echo $desg ?>;
-            		document.getElementById('insname').value=<?php echo $ins_name  ?>;
-            		document.getElementById('address').value=<?php echo $address  ?>;
-
+                    document.getElementById('fnameid').value="<?php echo $fac_det['uname']?>";
+                    document.getElementById('insnameid').value="<?php echo $fac_det['ins_name']?>";
             		</script>
 
                     <div class="row fields">
@@ -193,7 +190,7 @@ body { font-size:14px; }
                                 <label >Date:</label>
                             </div>
                             <div class="col-md-5 ">
-                                <input type="date" name="date" class="inputc" required style="color: black">
+                                <input type="text" name="date" class="inputc" required placeholder="dd/mm/yyyy" style="color: black">
                             </div>
                     </div>
 
@@ -233,7 +230,7 @@ body { font-size:14px; }
 							<input type="text" name="sn_name[]" placeholder="Student name" required>
 						</td>
 						<td>
-							<input type="text" class="small"  name="sn_id[]" placeholder="Student ID">
+							<input type="text" class="small"  name="sn_id[]" placeholder="SpaceNext Username">
 						</td>
 					</p>
 				  </tr>
@@ -316,25 +313,7 @@ function addRow(tableID) {
 if (isset($_POST['submit'])) {
 	//echo "Signed Up Bitchessssss!!!";
 
-	create_iv($con);
+	// create_iv($con);
 }
 
 //date("Y/m/d")
-function create_iv($con)
-{
-	$fname = $_POST['fname'];
-	$fid = $_POST['fid'];
-	$desg = $_POST['desg'];
-	$insname = $_POST['insname'];
-	$address = $_POST['address'];
-	$nstudents = $_POST['nstudents'];
-	$sn_name=$_POST['sn_name'];
-	$sn_id=$_POST['sn_id'];
-	$t_name="ids".rand(1,10000);
-	echo "string";
-
-}
-
-
-
-?>
