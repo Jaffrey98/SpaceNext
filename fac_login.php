@@ -220,8 +220,8 @@ body { font-size:14px; }
 			<div class="col-md-2">
 
 			</div>
-			<div class="col-md-3" style="margin-left: 20px">
-				<a href="stu_login.php"><input type="button" value="Back to student" name="back_to_stud" /> </a>
+			<div class="col-md-3" style="margin-left: 35px">
+				<a href="stu_login.php"><input type="button" value="I'm a Student" name="back_to_stud" /> </a>
 			</div>
 			<div class="col-md-1">
 

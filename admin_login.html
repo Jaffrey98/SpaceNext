@@ -126,14 +126,14 @@ body { font-size:14px; }
 <div>
 <div class="col-md-2"></div>
 <div class="col-md-8">
-	<form class="form" action="admin_login.php" method="post">
+	<form class="form" method="POST">
 		<div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<label >Username:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="uname" class="inputc" required>
+				<input type="text" name="uname" id="uname" class="inputc" required>
 			</div>		
 		</div>
 		<div class="row fields">
@@ -142,13 +142,13 @@ body { font-size:14px; }
 				<label >Password:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="Password" name="pass" class="inputc" required>
+				<input type="Password" name="pass" id="pass" class="inputc" required>
 			</div>		
 		</div>
 		<br>
 			<center>
 			<!-- IF LOGIN CORRECT REDIRECT TO admin_logged_in/index.html -->
-				<input type="submit" value="Submit" name="submit" style="margin-left: 10px;" /> 
+				<input type="button" onclick="submitbtn()" value="Submit" name="submit" style="margin-left: 10px;" /> 
 			</center>
 				 
 				
@@ -165,6 +165,26 @@ body { font-size:14px; }
 
 </div>
 
+<script type="text/javascript">
+
+	function submitbtn()
+	{
+		console.log("1");
+		var x = document.getElementById("uname").value;
+		var y = document.getElementById("pass").value;
+		if (x==='admin'&&y==='admin') {
+			console.log("2");
+			window.location = "admin_logged_in/index.html";
+			console.log("3");
+		}
+		else
+		{
+			console.log("4");
+			alert("Incorrect User id or password!!");
+		}
+	}
+		
+</script>
 
 
 

@@ -17,6 +17,22 @@ Astrid is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 */
+
+.book_button{
+
+    border: 1px solid #000000;
+    color: #000000;
+
+}
+
+.book_button:hover{
+
+    border: 1px solid #ff00ff;
+    color: #000000;
+
+}
+
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;

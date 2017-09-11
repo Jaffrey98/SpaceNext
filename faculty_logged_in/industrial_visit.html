@@ -12,9 +12,13 @@
 <link rel="stylesheet" type="text/css" href="form.css">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Feed" href="http://localhost/wordpress/feed/">
 <link rel="alternate" type="application/rss+xml" title="SpaceNext » Comments Feed" href="http://localhost/wordpress/comments/feed/">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" id="bootstrap-css" href="./index_files/bootstrap.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="astrid-style-css" href="./index_files/style.css" type="text/css" media="all">
 <style id="astrid-style-inline-css" type="text/css">
+
 .site-header {position: fixed;}
 .site-title a,.site-title a:hover { color:#ffffff}
 .site-description { color:#BDBDBD}
@@ -131,12 +135,49 @@ body { font-size:14px; }
 		Friction welding involves a high speed rubbing together of metal parts rather than the application of external heat to melt the parts. The technique should result in stronger welds. ISIS has allowed us to confirm this by measuring the internal stresses induced by the process to confirm the final weld quality.
 
 	</p>
-
 <div>
-	<a class="button header-button" href="ivform.php" style="margin-bottom: 100px;">Book Now</a>
+	<!-- <a class="button header-button book_button" data-toggle="modal" data-target="#myModal" style="margin-bottom: 50px;">View My Applications</a>
+	<button type="button" class="btn btn-info btn-lg " data-toggle="modal" data-target="#myModal">Open Modal</button>
+</div> -->
+<center>
+	
+	<button type="button" class="btn btn-info btn-lg button header-button book_button" data-toggle="modal" data-target="#myModal" style="margin-bottom: 50px; border-radius: 0px;">View Application Status</button>
+</center>
+<div>
+	<a class="button header-button book_button" href="ivform.php" style="margin-bottom: 100px;">Book Now</a>
 </div>
 
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Application Status</h4>
+        </div>
+        <div class="modal-body">
+        <center>
+        <h3>Please scan the QR code to make payment.</h3>
+        <h4>Amount : Rs. 1000 </h4>
+        	
+          <img src="index_files/qr.jpg">
+        </center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
 
 </body>
 </html>
