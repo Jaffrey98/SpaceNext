@@ -178,7 +178,7 @@ p{
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="name" id="name_id" class="inputc" required>
-			</div>		
+			</div>
 		</div> -->
 		<!-- <div class="row fields">
 		<div class="col-md-3"></div>
@@ -196,8 +196,8 @@ p{
 				<label >Phone No:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="number" name="phoneno" id="phoneno_id" class="inputc" required>  
-			</div>	
+				<input type="number" name="phoneno" id="phoneno_id" class="inputc" required>
+			</div>
 		</div> -->
 
 	<!-- 	<div class="row fields">
@@ -207,12 +207,12 @@ p{
 			</div>
 			<div class="col-md-5 ">
 				<textarea name="address" class="inputc" id="address_id" required="true" style="height: 100px;">
-					
+
 				</textarea>
-				
-			</div>		
+
+			</div>
 		</div> -->
-		
+
 		<!-- <div class="row fields">
 		<div class="col-md-3"></div>
 			<div class="col-md-2">
@@ -220,7 +220,7 @@ p{
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="desg" id="desg_id" class="inputc" required>
-			</div>		
+			</div>
 		</div>
  -->
 		<!-- <div class="row fields">
@@ -230,7 +230,7 @@ p{
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="insname" id="insname_id" class="inputc" required >
-			</div>		
+			</div>
 		</div>
  -->
 
@@ -245,7 +245,7 @@ p{
 				// ";
 
 				// $nid = name_id;
-				
+
 				// $nid = $divId=get_the_ID();
 
 
@@ -286,7 +286,7 @@ if (mysqli_num_rows($fac_data)) {
 
 				echo "</tr>";
 
-			 
+
 
 
 
@@ -322,25 +322,35 @@ else
 ?>
 
 <script>
+// alert('hello');
+
+function myFunctionr() {
+	console.log("r");
+    document.write("hello");
+	<?php
+		// echo"<script>
+		// console.log('r');
+		// </script>";
+		$sql = "UPDATE reg_fac SET status = 2 WHERE sr_no = $sr_no";
+		$update_fac = mysqli_query($con,$sql);
+	?>
+	alert("Action Performed. Please refresh the page.");
+}
 
 function myFunctiona() {
-	console.log("a");
+	alert("a");
 	<?php
+        // echo"<script>
+        // console.log('a');
+        // </script>";
+        echo"console.log('a');";
 		$sql = "UPDATE reg_fac SET status = 1 WHERE sr_no = $sr_no";
 		$update_fac = mysqli_query($con,$sql);
 	?>
 	alert("Action Performed. Please refresh the page.");
 }
 
-function myFunctionr() {
 
-	console.log("r");
-	<?php
-		$sql = "UPDATE reg_fac SET status = 2 WHERE sr_no = $sr_no";
-		$update_fac = mysqli_query($con,$sql);
-	?>
-	alert("Action Performed. Please refresh the page.");
-}
 
 
 </script>
@@ -350,7 +360,7 @@ function myFunctionr() {
 		<!-- <br><br>
 		<div class="row">
 			<div class="col-md-3">
-				
+
 			</div>
 			<div class="col-md-8">
 				<div class="row fields">
@@ -364,14 +374,14 @@ function myFunctionr() {
 				</div>
 			</div>
 			<div class="col-md-3">
-				
-			</div>
-			
-		</div> -->
-			
 
-		
-			
+			</div>
+
+		</div> -->
+
+
+
+
 			<!-- just add to database in faculty table -->
 	</form>
 
