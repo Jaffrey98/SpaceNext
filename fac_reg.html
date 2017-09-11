@@ -148,7 +148,7 @@ body { font-size:14px; }
 				<label >Name:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="text" name="name" class="inputc" required>
+				<input type="text" name="name" class="inputc" required maxlength="15">
 			</div>
 		</div>
 		<div class="row fields">
@@ -212,7 +212,7 @@ body { font-size:14px; }
 				<label >Password:</label>
 			</div>
 			<div class="col-md-5 ">
-				<input type="Password" name="pass" class="inputc" required>
+				<input type="Password" name="pass" class="inputc" required maxlength="15">
 			</div>
 		</div>
 
@@ -233,11 +233,18 @@ body { font-size:14px; }
   			<iframe name="result" width="500" height="50" style="margin-left: 180px;border:0px;"></iframe>
 
 			<!-- just add to database in faculty table with confirmed value 0 -->
+
+			<center>
+				<h2 style="color: white; padding-top: 50px; ">Your account will be verified within 24 hrs...</h2>
+			</center>
+		
 	</form>
 
 
 		<div class="col-md-5 "></div>
 		<button onclick="validate_phone_no()" class="validate_button">Validate</button>
+
+		
 
 </div>
 
