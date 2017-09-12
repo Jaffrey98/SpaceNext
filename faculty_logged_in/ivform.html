@@ -79,7 +79,7 @@ body { font-size:14px; }
 		<div class="container">
 			<div class="site-branding col-md-4 col-sm-6 col-xs-12">
 				<h1 class="site-title"><a href="#" rel="home">SpaceNext</a></h1><p class="site-description"></p>			</div>
-			<div class="btn-menu col-md-8 col-sm-6 col-xs-12"><i class="fa fa-navicon"></i></div>
+			<div class="btn-menu col-md-8 col-sm-6 col-xs-12"><i class="fa fa-navicon"><img class="nav-icon" src="../index_files/ham_icon.png" alt=""></i></div>
 			<nav id="mainnav" class="main-navigation col-md-8 col-sm-6 col-xs-12" role="navigation">
 				<div id="primary-menu" class="menu"><ul>
 <li class="page_item page-item-2"><a href="index.html">Home</a></li>
@@ -91,9 +91,13 @@ body { font-size:14px; }
 			</nav>
 		</div>
 	</header>
+    <style>
+    .nav-icon{
+        width: 25px;
+        height: 20px;
+    }
+    </style>
 			<div class="header-image">
-
-
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info container">
 				<nav id="footernav" class="footer-navigation" role="navigation">
@@ -126,7 +130,7 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="fname" id="fnameid" class="inputc" required readonly>
-			</div>		
+			</div>
 		</div>
 		<div class="row fields">
 		<div class="col-md-3"></div>
@@ -135,7 +139,7 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="desg" id="desgid" class="inputc" required readonly>
-			</div>		
+			</div>
 		</div>
 		<div class="row fields">
 		<div class="col-md-3"></div>
@@ -144,7 +148,7 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="insname" id="insnameid" class="inputc" required readonly>
-			</div>		
+			</div>
 		</div>
 		<div class="row fields">
 		<div class="col-md-3"></div>
@@ -153,7 +157,7 @@ body { font-size:14px; }
 			</div>
 			<div class="col-md-5 ">
 				<input type="text" name="address" id="addressid" class="inputc" required readonly>
-			</div>		
+			</div>
 		</div>
 		<div class="row fields">
 			<div class="col-md-3"></div>
@@ -162,24 +166,24 @@ body { font-size:14px; }
 				</div>
 				<div class="col-md-5 ">
 					<input type="number" name="nstudents" class="inputc" required style="color: black">
-				</div>		
+				</div>
 		</div>
 		<br>
 		<div class="row fields">
 			<div class="col-md-4"></div>
 			<div class="col-md-8">
-				<p> 
-				  <input type="button" value="Add Student" onClick="addRow('dataTable')" style="margin-left: 40px" /> 
+				<p>
+				  <input type="button" value="Add Student" onClick="addRow('dataTable')" style="margin-left: 40px" />
 				  <!-- <input type="button" value="Remove Student(s)" onClick="deleteRow('dataTable')" />  -->
 				  <!-- <p>(All acions apply only to entries with check marked check boxes only.)</p> -->
 				</p>
 			</div>
-			<div class="col-md-1"></div>	
+			<div class="col-md-1"></div>
 		</div>
 
 
 		<table id="dataTable" class="formtable modifytable">
-			 <tbody>		 
+			 <tbody>
 				  <tr>
 					<p>
 						<!-- <td>
@@ -187,18 +191,18 @@ body { font-size:14px; }
 						</td> -->
 						<td>
 							<input type="text" name="sn_name[]" placeholder="Student name" required>
-						</td>	
+						</td>
 						<td>
 							<input type="text" class="small"  name="sn_id[]" placeholder="Student ID">
-						</td>	
+						</td>
 					</p>
 				  </tr>
-			 
+
 			 </tbody>
 		</table>
 
 			<div class="col-md-5"></div>
-			<input type="submit" value="Submit" name="submit" /> 
+			<input type="submit" value="Submit" name="submit" />
 			<!-- Send the details to iv table -->
 
 
@@ -216,7 +220,7 @@ body { font-size:14px; }
 
 
 <script type="text/javascript">
-	
+
 function addRow(tableID) {
 	var x = document.getElementsByName("nstudents")[0].value;
 	var nos = Number(x);
@@ -233,7 +237,7 @@ function addRow(tableID) {
 		}
 	}else{
 		 alert("Maximum no. of students "+ nos +" reached");
-			   
+
 	}
 }
 
