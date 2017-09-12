@@ -26,7 +26,13 @@ $dstatus=0;
 // echo"dec 1"."<br>";
 
 $ctable_sql="CREATE TABLE `$date` ( id INT NOT NULL AUTO_INCREMENT , fac_sr_no INT NOT NULL , st_name VARCHAR(25) NOT NULL , st_uname VARCHAR(25) DEFAULT NULL, cost INT DEFAULT $dcost,status TINYINT NOT NULL DEFAULT $dstatus, PRIMARY KEY (id))";
-$ctable_exec=mysqli_query($con,$ctable_sql);
+// $ctable_exec=mysqli_query($con,$ctable_sql);
+
+
+if (!mysqli_query($con,$ctable_sql)) {
+    echo'<script>alert("Date not available.Please enter another date")</script>';
+    echo'<script>window.location.replace("ivform.php")</script>';
+}
 
 $i=0;
 // echo $sn_ns.'<br>';
