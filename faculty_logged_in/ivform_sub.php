@@ -30,7 +30,7 @@ $ctable_sql="CREATE TABLE `$date` ( id INT NOT NULL AUTO_INCREMENT , fac_sr_no I
 
 
 if (!mysqli_query($con,$ctable_sql)) {
-    echo'<script>alert("Date not available.Please enter another date")</script>';
+    echo'<script>   alert("Date not available.Please enter another date")</script>';
     echo'<script>window.location.replace("ivform.php")</script>';
 }
 
@@ -75,8 +75,8 @@ $sum = $row['value_sum'];
         }
         .amount {
             color: rgb(255, 255, 255);
-            font-size: 50   px;
-            text-shadow: 2px 2px grey;
+            font-size: 50px;
+            text-shadow: 1px 1px grey;
         }
         p{
             color: rgb(86, 143, 210)
