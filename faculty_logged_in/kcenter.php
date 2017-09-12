@@ -78,7 +78,7 @@ body { font-size:14px; }
 		<div class="container">
 			<div class="site-branding col-md-4 col-sm-6 col-xs-12">
 				<h1 class="site-title"><a href="#" rel="home">SpaceNext</a></h1><p class="site-description"></p>			</div>
-			<div class="btn-menu col-md-8 col-sm-6 col-xs-12"><i class="fa fa-navicon"><img class="nav-icon" src="../index_files/ham_icon.png" alt=""></i></div>
+			<div class="btn-menu col-md-8 col-sm-6 col-xs-12"><i class="fa"><img class="nav-icon" src="../index_files/ham_icon.png" alt=""></i></div>
 			<nav id="mainnav" class="main-navigation col-md-8 col-sm-6 col-xs-12" role="navigation">
 				<div id="primary-menu" class="menu"><ul>
 <li class="page_item page-item-2"><a href="index.html">Home</a></li>
