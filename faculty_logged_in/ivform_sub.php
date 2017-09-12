@@ -60,9 +60,16 @@ $sum = $row['value_sum'];
     </head>
     <body bgcolor="#242D33">
         <style>
+        @font-face{
+        	font-family: "Josefin Sans";
+            src: url(../index_files/JosefinSans-Regular.ttf);
+        }
+        *{
+            font-family: Josefin Sans;
+        }
         .amount {
             color: rgb(255, 255, 255);
-            font-size: 45px;
+            font-size: 50   px;
             text-shadow: 2px 2px grey;
         }
         p{
@@ -88,14 +95,14 @@ $sum = $row['value_sum'];
         <br>
         <br>
         <center>
-            <p style="font-size:25px;font-family:Lucida Sans Unicode">Estimate(tentative) gross total for Industrial Visit <br>  <span style="text-decoration:underline">[ Fees wavied for <?php echo $ns_sch; ?> student(s) ]</span><br>&#8681;<br> <span class="amount">Rs <?php echo $sum; ?></span></p>
+            <p style="font-size:35px;">Estimate(tentative) gross total for Industrial Visit <br>  <span style="text-decoration:underline">Fees wavied for <?php echo $ns_sch; ?> student(s)</span><br>&#8681;<br> <span class="amount">Rs <?php echo $sum; ?></span></p>
             <br>
-            <p id="redirect0" style="font-size:20px;font-family:Lucida Sans Unicode"></p>
-            <p id="redirect1" style="font-size:20px;font-family:Lucida Sans Unicode"></p>
+            <p id="redirect0" style="font-size:20px;"></p>
+            <p id="redirect1" style="font-size:20px;"></p>
             <br>
             <p id="res"></p>
-            <button id="con" class="b conf" style="font-size:20px;font-family:Lucida Sans Unicode   ">CONFIRM</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <button id="can" class="b canc" style="font-size:20px;font-family:Lucida Sans Unicode">CANCEL</button>
+            <button id="con" class="b conf" style="font-size:20px;">CONFIRM</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <button id="can" class="b canc" style="font-size:20px";>CANCEL</button>
         </center>
         <script type="text/javascript" src="../index_files/jquery-3.2.1.min.js"></script>
         <script type="text/javascript">
